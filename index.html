@@ -81,6 +81,7 @@
                 <select id="daySelector" onchange="changeDay(this.value)" class="bg-slate-100 border border-slate-200 text-slate-700 text-xs sm:text-sm font-bold rounded-xl px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-agri-600">
                     <option value="1">Hari Ke-1 (30 Soal)</option>
                     <option value="2">Hari Ke-2 (65 Soal)</option>
+                    <option value="3">Hari Ke-3 (70 Soal HOTS)</option>
                 </select>
             </div>
 
@@ -113,12 +114,15 @@
                 </p>
 
                 <!-- Pemilih Hari di Card Start -->
-                <div class="flex items-center gap-2 mb-6 bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+                <div class="flex flex-wrap justify-center items-center gap-2 mb-6 bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
                     <button id="btnSelectDay1" onclick="changeDay('1')" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition bg-white text-agri-700 shadow-sm">
                         Hari 1 (30 Soal)
                     </button>
                     <button id="btnSelectDay2" onclick="changeDay('2')" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50">
                         Hari 2 (65 Soal)
+                    </button>
+                    <button id="btnSelectDay3" onclick="changeDay('3')" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50">
+                        Hari 3 (70 Soal)
                     </button>
                 </div>
 
@@ -269,330 +273,210 @@
             {
                 id: 1,
                 question: "Berapa kisaran ketinggian dari permukaan tanah saat memotong batang bawah sebelum melakukan penyambungan ranting?",
-                options: [
-                    "A. 1,5 hingga 3 cm",
-                    "B. 4,5 hingga 6 cm",
-                    "C. 7 hingga 9 cm"
-                ],
+                options: ["A. 1,5 hingga 3 cm", "B. 4,5 hingga 6 cm", "C. 7 hingga 9 cm"],
                 answer: 1,
                 explanation: "Pemotongan batang bawah untuk persiapan penyambungan ranting umumnya dilakukan pada kisaran ketinggian 4,5 hingga 6 cm dari permukaan tanah."
             },
             {
                 id: 2,
                 question: "Berapa sudut potongan yang dibuat pada bagian bahu batang bawah saat persiapan penyambungan?",
-                options: [
-                    "A. 30 derajat",
-                    "B. 45 derajat",
-                    "C. 60 derajat"
-                ],
+                options: ["A. 30 derajat", "B. 45 derajat", "C. 60 derajat"],
                 answer: 1,
                 explanation: "Sudut kemiringan potongan pada bagian bahu batang bawah dibuat sebesar 45 derajat untuk mempermudah penyambungan dan penempelan bidang kontak."
             },
             {
                 id: 3,
                 question: "Saat menyiapkan batang atas untuk penyambungan, bagian belakang batang juga dipotong miring sekitar...",
-                options: [
-                    "A. 9 mm",
-                    "B. 15 mm",
-                    "C. 25 mm"
-                ],
+                options: ["A. 9 mm", "B. 15 mm", "C. 25 mm"],
                 answer: 0,
                 explanation: "Bagian belakang batang atas (scion) dipotong miring tipis sekitar 9 mm agar dapat disisipkan secara pas pada celah batang bawah."
             },
             {
                 id: 4,
                 question: "Bagian manakah dari batang bawah dan atas yang harus dicocokkan dengan tepat saat proses penyambungan ranting?",
-                options: [
-                    "A. Bagian tengah empulur",
-                    "B. Sesama bagian kambium",
-                    "C. Bagian ujung terluar kulit kayu yang mati"
-                ],
+                options: ["A. Bagian tengah empulur", "B. Sesama bagian kambium", "C. Bagian ujung terluar kulit kayu yang mati"],
                 answer: 1,
                 explanation: "Bagian kambium pembuluh (形成層 / Kambium) dari batang atas dan batang bawah harus berhimpit tepat agar pembuluh kayu dapat menyatu dan jaringan dapat tumbuh."
             },
             {
                 id: 5,
                 question: "Bahan apa yang dioleskan pada sisi atas batang bawah setelah penyambungan ranting selesai dilakukan?",
-                options: [
-                    "A. Cat minyak",
-                    "B. Lilin untuk penyambungan",
-                    "C. Getah pohon alami"
-                ],
+                options: ["A. Cat minyak", "B. Lilin untuk penyambungan", "C. Getah pohon alami"],
                 answer: 1,
                 explanation: "Lilin penyambungan (接木ワックス / Grafting wax) dioleskan untuk menutup luka potong, mencegah penguapan air, dan melindungi luka dari infeksi kuman."
             },
             {
                 id: 6,
                 question: "Apa tujuan utama dari pemangkasan (pemotongan ranting) dalam budidaya buah?",
-                options: [
-                    "A. Agar pohon tumbuh setinggi mungkin tanpa batas",
-                    "B. Agar memungkinkan pohon berbunga dengan baik dan memanen buah secara stabil",
-                    "C. Untuk menghentikan pertumbuhan daun sepenuhnya sepanjang tahun"
-                ],
+                options: ["A. Agar pohon tumbuh setinggi mungkin tanpa batas", "B. Agar memungkinkan pohon berbunga dengan baik dan memanen buah secara stabil", "C. Untuk menghentikan pertumbuhan daun sepenuhnya sepanjang tahun"],
                 answer: 1,
                 explanation: "Pemangkasan (剪定) bertujuan mengatur keseimbangan antara pertumbuhan vegetatif dan generatif agar pohon dapat berbunga optimal dan menghasilkan buah secara stabil berkelanjutan."
             },
             {
                 id: 7,
                 question: "Pemangkasan berat pada pohon buah berfungsi untuk...",
-                options: [
-                    "A. Mendorong pertumbuhan generatif",
-                    "B. Menekan pertumbuhan vegetatif secara total",
-                    "C. Mendorong pertumbuhan vegetatif"
-                ],
+                options: ["A. Mendorong pertumbuhan generatif", "B. Menekan pertumbuhan vegetatif secara total", "C. Mendorong pertumbuhan vegetatif"],
                 answer: 2,
                 explanation: "Pemangkasan berat (強剪定) merangsang tumbuhnya tunas-tunas baru yang kuat, sehingga berfungsi MENDORONG pertumbuhan vegetatif."
             },
             {
                 id: 8,
                 question: "Apa yang dimaksud dengan \"ranting roda putar\" yang harus dihindari dalam proses perapian?",
-                options: [
-                    "A. Ranting yang melingkar membentuk spiral di udara",
-                    "B. Beberapa ranting utama yang keluar dari satu titik batang utama",
-                    "C. Ranting yang berputar arah akibat tiupan angin kencang"
-                ],
+                options: ["A. Ranting yang melingkar membentuk spiral di udara", "B. Beberapa ranting utama yang keluar dari satu titik batang utama", "C. Ranting yang berputar arah akibat tiupan angin kencang"],
                 answer: 1,
                 explanation: "Ranting roda putar (車枝 / Kurumada) adalah kondisi di mana beberapa ranting tumbuh memancar keluar dari satu titik yang sama pada batang utama, yang memicu kelemahan struktur tajuk."
             },
             {
                 id: 9,
                 question: "Kapan waktu utama pelaksanaan pemangkasan pada pohon buah?",
-                options: [
-                    "A. Musim semi",
-                    "B. Musim panas",
-                    "C. Musim dingin"
-                ],
+                options: ["A. Musim semi", "B. Musim panas", "C. Musim dingin"],
                 answer: 2,
                 explanation: "Waktu utama pemangkasan pohon buah adalah pada musim dingin (冬季剪定), yaitu saat tanaman sedang mengalami masa dormansi (istirahat)."
             },
             {
                 id: 10,
                 question: "Jenis pemangkasan apa yang dilakukan untuk memotong ranting yang telah panjang guna mendorong pertumbuhan ranting baru?",
-                options: [
-                    "A. Pemangkasan di tengah ranting",
-                    "B. Pemangkasan untuk penjarangan",
-                    "C. Pemangkasan akar bawah"
-                ],
+                options: ["A. Pemangkasan di tengah ranting", "B. Pemangkasan untuk penjarangan", "C. Pemangkasan akar bawah"],
                 answer: 0,
                 explanation: "Pemangkasan di tengah ranting (切り戻し剪定 / Heading-back pruning) dilakukan dengan memotong sebagian ranting panjang untuk merangsang munculnya ranting/tunas baru."
             },
             {
                 id: 11,
                 question: "Jenis pemangkasan apa yang bertujuan supaya udara dapat masuk dan memperoleh sinar matahari dengan baik dengan memotong ranting yang tidak diperlukan?",
-                options: [
-                    "A. Pemangkasan di tengah ranting",
-                    "B. Pemangkasan untuk penjarangan",
-                    "C. Pemangkasan pucuk daun"
-                ],
+                options: ["A. Pemangkasan di tengah ranting", "B. Pemangkasan untuk penjarangan", "C. Pemangkasan pucuk daun"],
                 answer: 1,
                 explanation: "Pemangkasan penjarangan (間引き剪定 / Thinning pruning) memotong ranting tak berguna dari pangkalnya agar tajuk pohon tidak terlalu lebat sehingga sinar matahari dan udara dapat masuk dengan baik."
             },
             {
                 id: 12,
                 question: "Tipe bentuk pohon apa yang diterapkan untuk budidaya kerdil pada tanaman apel dan persik?",
-                options: [
-                    "A. Tipe pusat terbuka",
-                    "B. Tipe batang utama",
-                    "C. Metode rak"
-                ],
+                options: ["A. Tipe pusat terbuka", "B. Tipe batang utama", "C. Metode rak"],
                 answer: 1,
                 explanation: "Tipe batang utama (主幹形) diterapkan pada budidaya tanaman kerdil (わい化栽培) seperti apel dan persik agar efisiensi ruang dan perawatan meningkat."
             },
             {
                 id: 13,
                 question: "Tanaman buah apa saja yang umumnya menggunakan tipe pusat terbuka dalam pembentukan bentuk pohonnya?",
-                options: [
-                    "A. Apel dan kesemak",
-                    "B. Anggur dan pir Jepang",
-                    "C. Persik, plum, dan prunus mume"
-                ],
+                options: ["A. Apel dan kesemak", "B. Anggur dan pir Jepang", "C. Persik, plum, dan prunus mume"],
                 answer: 2,
                 explanation: "Tipe pusat terbuka (開心自然形) umumnya diterapkan pada pohon persik (モモ), plum (スモモ), dan prunus mume (ウメ)."
             },
             {
                 id: 14,
                 question: "Metode apakah yang digunakan untuk mengatur arah memanjangnya ranting muda pada tanaman seperti pir Jepang dan anggur?",
-                options: [
-                    "A. Pengikatan",
-                    "B. Penimbunan tanah",
-                    "C. Penarikan akar"
-                ],
+                options: ["A. Pengikatan", "B. Penimbunan tanah", "C. Penarikan akar"],
                 answer: 0,
                 explanation: "Pengikatan dan pembengkokan ranting (誘引 / Yuuin) dilakukan pada kerangka/rak teralis (棚) untuk mengatur arah pertumbuhan ranting pir Jepang dan anggur."
             },
             {
                 id: 15,
                 question: "Apa fungsi utama dari penanaman pohon pollinizer (pohon dengan varietas berbeda) di kebun buah?",
-                options: [
-                    "A. Sebagai pagar pelindung angin",
-                    "B. Untuk membuat proses pembuahan lebih baik melalui penyerbukan",
-                    "C. Sebagai peneduh bagi pohon buah utama"
-                ],
+                options: ["A. Sebagai pagar pelindung angin", "B. Untuk membuat proses pembuahan lebih baik melalui penyerbukan", "C. Sebagai peneduh bagi pohon buah utama"],
                 answer: 1,
                 explanation: "Pohon pollinizer (受粉樹 / Jubun-ju) adalah pohon varietas penyerbuk yang ditanam untuk memberikan serbuk sari yang cocok demi menyempurnakan pembuahan."
             },
             {
                 id: 16,
                 question: "Alat apakah yang tidak digunakan untuk penyerbukan buatan pada pohon buah peluruh?",
-                options: [
-                    "A. Alat penyerbukan buatan mekanis",
-                    "B. Kapas pom-pom/Bonten",
-                    "C. Gergaji mesin pemotong ranting"
-                ],
+                options: ["A. Alat penyerbukan buatan mekanis", "B. Kapas pom-pom/Bonten", "C. Gergaji mesin pemotong ranting"],
                 answer: 2,
                 explanation: "Gergaji mesin adalah alat pertukangan/pemangkasan dahan besar, bukan alat penyerbukan buatan (人工受粉)."
             },
             {
                 id: 17,
                 question: "Manakah kondisi buah yang harus dipangkas (dibuang) saat proses pemangkasan buah?",
-                options: [
-                    "A. Buah yang posisinya paling mudah ditutupi kantong",
-                    "B. Buah yang terkena dampak hama atau rusak",
-                    "C. Buah yang pertumbuhannya paling cepat dan ukurannya paling besar"
-                ],
+                options: ["A. Buah yang posisinya paling mudah ditutupi kantong", "B. Buah yang terkena dampak hama atau rusak", "C. Buah yang pertumbuhannya paling cepat dan ukurannya paling besar"],
                 answer: 1,
                 explanation: "Penjarangan/pemangkasan buah (摘果 / Tekka) mengutamakan pembuangan buah yang terserang hama, cacat, kerdil, atau mengalami kerusakan mekanis."
             },
             {
                 id: 18,
                 question: "Pada tanaman pir, bentuk buah seperti apakah yang harus dipangkas karena dianggap tidak ideal?",
-                options: [
-                    "A. Buah berbentuk seperti menutup kepala dengan piring",
-                    "B. Buah berbentuk seperti buah ara atau yang memiliki bentuk urat",
-                    "C. Buah dengan bentuk simetris sempurna di tengah tangkai"
-                ],
+                options: ["A. Buah berbentuk seperti menutup kepala dengan piring", "B. Buah berbentuk seperti buah ara atau yang memiliki bentuk urat", "C. Buah dengan bentuk simetris sempurna di tengah tangkai"],
                 answer: 1,
                 explanation: "Pada buah pir, bentuk buah abnormal seperti berbentuk buah ara (イチジク形) atau berurat tidak ideal sehingga harus dibuang saat penjarangan."
             },
             {
                 id: 19,
                 question: "Apa tujuan utama dari pembungkusan buah dengan kantong (pemberian kantong pada buah)?",
-                options: [
-                    "A. Untuk mempercepat proses pembusukan alami",
-                    "B. Untuk mencegah hama dan menghasilkan buah yang bagus",
-                    "C. Agar buah tidak terkena cahaya matahari sama sekali selamanya"
-                ],
+                options: ["A. Untuk mempercepat proses pembusukan alami", "B. Untuk mencegah hama dan menghasilkan buah yang bagus", "C. Agar buah tidak terkena cahaya matahari sama sekali selamanya"],
                 answer: 1,
                 explanation: "Pembungkusan buah (袋かけ / Fukurokake) bertujuan melindungi buah dari infeksi penyakit, gigitan hama, gesekan angin, serta mempercantik penampilan warna kulit buah."
             },
             {
                 id: 20,
                 question: "Saat membungkus buah persik, di manakah posisi ranting dan buah yang harus dimasukkan ke dalam kantong?",
-                options: [
-                    "A. Memasukkan ranting pada bagian potongan kantong dan buah ke tengah kantong dengan pasti",
-                    "B. Memasukkan buah di bagian sudut paling bawah kantong tanpa ranting",
-                    "C. Mengikat kantong langsung pada daun terdekat tanpa memasukkan buah"
-                ],
+                options: ["A. Memasukkan ranting pada bagian potongan kantong dan buah ke tengah kantong dengan pasti", "B. Memasukkan buah di bagian sudut paling bawah kantong tanpa ranting", "C. Mengikat kantong langsung pada daun terdekat tanpa memasukkan buah"],
                 answer: 0,
                 explanation: "Saat membungkus persik, ranting dimasukkan ke celah takik kantong dan pastikan buah berada di tengah-tengah ruang kantong secara aman sebelum diikat."
             },
             {
                 id: 21,
                 question: "Kapan waktu panen utama untuk buah jeruk unshiu berdasarkan data dalam dokumen?",
-                options: [
-                    "A. Akhir Juni hingga akhir Agustus",
-                    "B. Pertengahan Agustus hingga awal Oktober",
-                    "C. Pertengahan Oktober hingga awal Desember"
-                ],
+                options: ["A. Akhir Juni hingga akhir Agustus", "B. Pertengahan Agustus hingga awal Oktober", "C. Pertengahan Oktober hingga awal Desember"],
                 answer: 2,
                 explanation: "Masa panen puncak untuk buah jeruk Unshiu (温州ミカン) adalah pada pertengahan Oktober hingga awal Desember."
             },
             {
                 id: 22,
                 question: "Buah apa yang mengalami waktu panen paling awal (antara akhir Juni hingga akhir Agustus)?",
-                options: [
-                    "A. Apel",
-                    "B. Persik",
-                    "C. Kesemak"
-                ],
+                options: ["A. Apel", "B. Persik", "C. Kesemak"],
                 answer: 1,
                 explanation: "Buah persik (モモ) dipanen paling awal yaitu pada pertengahan musim panas antara akhir Juni hingga akhir Agustus."
             },
             {
                 id: 23,
                 question: "Buah apa saja yang memerlukan proses pematangan dengan menyimpannya (pematangan tambahan) setelah dipanen?",
-                options: [
-                    "A. Jeruk unshiu dan anggur",
-                    "B. Pir barat dan kiwi",
-                    "C. Persik dan kesemak"
-                ],
+                options: ["A. Jeruk unshiu dan anggur", "B. Pir barat dan kiwi", "C. Persik dan kesemak"],
                 answer: 1,
                 explanation: "Pir barat (西洋ナシ) dan buah Kiwi (キウイフルーツ) membutuhkan periode pematangan simpan (追熟 / Tsuijuku) setelah dipetik sebelum siap dikonsumsi."
             },
             {
                 id: 24,
                 question: "Apa istilah untuk tindakan menanam kembali bibit pohon baru di kebun yang pohonnya sudah menua dan jumlah panennya berkurang?",
-                options: [
-                    "A. Penyambungan atas",
-                    "B. Peremajaan (penanaman kembali)",
-                    "C. Pemangkasan berat"
-                ],
+                options: ["A. Penyambungan atas", "B. Peremajaan (penanaman kembali)", "C. Pemangkasan berat"],
                 answer: 1,
                 explanation: "Tindakan mengganti pohon tua berproduksi rendah dengan bibit pohon baru disebut peremajaan kebun atau penanaman kembali (改植 / Kaishoku)."
             },
             {
                 id: 25,
                 question: "Apa yang dimaksud dengan teknik \"penyambungan atas\" pada pohon buah?",
-                options: [
-                    "A. Menyambungkan akar pohon buah dengan akar rumput liar",
-                    "B. Menyambungkan ranting pohon buah dengan ranting varietas baru",
-                    "C. Menempelkan daun baru ke batang utama yang sudah mati"
-                ],
+                options: ["A. Menyambungkan akar pohon buah dengan akar rumput liar", "B. Menyambungkan ranting pohon buah dengan ranting varietas baru", "C. Menempelkan daun baru ke batang utama yang sudah mati"],
                 answer: 1,
                 explanation: "Penyambungan atas (高接ぎ / Takatsugi) adalah teknik mengganti varietas pohon buah dengan menyambungkan ranting varietas baru pada dahan/tajuk pohon tua yang ada."
             },
             {
                 id: 26,
                 question: "Metode pengelolaan permukaan tanah manakah yang tidak cocok diterapkan di perkebunan buah yang memiliki banyak lereng?",
-                options: [
-                    "A. Metode yang tidak menumbuhkan gulma",
-                    "B. Metode dengan menghamparkan jerami atau rumput",
-                    "C. Metode selalu membiarkan rumput tumbuh"
-                ],
+                options: ["A. Metode yang tidak menumbuhkan gulma", "B. Metode dengan menghamparkan jerami atau rumput", "C. Metode selalu membiarkan rumput tumbuh"],
                 answer: 0,
                 explanation: "Metode tanah bersih tanpa rumput (清耕法) tidak cocok untuk kebun lereng karena ketiadaan penutup tanah akan memicu bahaya erosi dan pengikisan tanah saat hujan."
             },
             {
                 id: 27,
                 question: "Mengapa pembuatan saluran pembuangan air dan dinding batu diperlukan di perkebunan buah?",
-                options: [
-                    "A. Untuk mempercepat penyerapan pupuk kimia cair",
-                    "B. Supaya tanah tidak mengalir atau runtuh akibat hujan deras",
-                    "C. Untuk menambah kelembapan ekstrem di dalam tanah"
-                ],
+                options: ["A. Untuk mempercepat penyerapan pupuk kimia cair", "B. Supaya tanah tidak mengalir atau runtuh akibat hujan deras", "C. Untuk menambah kelembapan ekstrem di dalam tanah"],
                 answer: 1,
                 explanation: "Pembuatan drainase pembuangan air dan dinding penahan (石垣) sangat penting di perkebunan berlereng untuk mencegah hanyutnya tanah atau longsor akibat hujan deras."
             },
             {
                 id: 28,
                 question: "Apa manfaat dari melakukan pembajakan tanah sampai dalam (pembajakan dalam) atau memberi zat organik pada tanah?",
-                options: [
-                    "A. Meningkatkan kemampuan penampungan air dan ventilasi sehingga pertumbuhan akar meningkat",
-                    "B. Membuat tanah menjadi kedap air sepenuhnya",
-                    "C. Membunuh seluruh mikroorganisme di dalam tanah"
-                ],
+                options: ["A. Meningkatkan kemampuan penampungan air dan ventilasi sehingga pertumbuhan akar meningkat", "B. Membuat tanah menjadi kedap air sepenuhnya", "C. Membunuh seluruh mikroorganisme di dalam tanah"],
                 answer: 0,
                 explanation: "Pembajakan dalam (深耕) dan penambahan bahan organik melembutkan struktur tanah, meningkatkan aerasi (ventilasi) dan daya simpan air, sehingga mendorong perkembangan akar."
             },
             {
                 id: 29,
                 question: "Sifat tanah di Jepang umumnya cenderung seperti apa, sehingga memerlukan penyesuaian pH?",
-                options: [
-                    "A. Memiliki sifat basa yang tinggi",
-                    "B. Memiliki sifat asam",
-                    "C. Bersifat netral secara permanen"
-                ],
+                options: ["A. Memiliki sifat basa yang tinggi", "B. Memiliki sifat asam", "C. Bersifat netral secara permanen"],
                 answer: 1,
                 explanation: "Tanah di Jepang secara alami cenderung bersifat asam (酸性土壌) akibat tingginya curah hujan yang melarutkan unsur basa tanah."
             },
             {
                 id: 30,
                 question: "Bahan apakah yang digunakan untuk menyesuaikan pH tanah di Jepang agar sesuai dengan kebutuhan budidaya pohon buah?",
-                options: [
-                    "A. Bahan zat kapur bersifat alkali",
-                    "B. Pupuk urea berkadar tinggi",
-                    "C. Air laut bergaram tinggi"
-                ],
+                options: ["A. Bahan zat kapur bersifat alkali", "B. Pupuk urea berkadar tinggi", "C. Air laut bergaram tinggi"],
                 answer: 0,
                 explanation: "Bahan kalsium/zat kapur bersifat alkali (苦土石灰 / Kapur pertanian) diberikan ke tanah untuk menetralkan keasaman tanah Jepang agar sesuai untuk pertumbuhan pohon buah."
             }
@@ -603,717 +487,1231 @@
             {
                 id: 1,
                 question: "Apa fungsi utama dari organ generatif pada tanaman?",
-                options: [
-                    "A. Mendukung pertumbuhan vegetatif batang dan akar",
-                    "B. Menghasilkan anakan melalui bunga dan buah",
-                    "C. Menyerap nutrisi mineral dan air dari dalam tanah"
-                ],
+                options: ["A. Mendukung pertumbuhan vegetatif batang dan akar", "B. Menghasilkan anakan melalui bunga dan buah", "C. Menyerap nutrisi mineral dan air dari dalam tanah"],
                 answer: 1,
                 explanation: "Organ generatif terdiri atas bunga dan buah yang berfungsi untuk menghasilkan anakan, sedangkan daun, batang, dan akar adalah organ vegetatif."
             },
             {
                 id: 2,
                 question: "Faktor apa yang paling memicu peningkatan proses pernapasan (respirasi) pada tanaman di malam hari?",
-                options: [
-                    "A. Kondisi suhu udara malam hari yang tinggi",
-                    "B. Kelembapan tanah yang terlalu rendah",
-                    "C. Intensitas cahaya matahari yang berlebih"
-                ],
+                options: ["A. Kondisi suhu udara malam hari yang tinggi", "B. Kelembapan tanah yang terlalu rendah", "C. Intensitas cahaya matahari yang berlebih"],
                 answer: 0,
                 explanation: "Dalam kondisi suhu udara malam yang tinggi, tanaman melakukan pernapasan lebih banyak sehingga karbohidrat hasil siang hari terkonsumsi banyak."
             },
             {
                 id: 3,
                 question: "Tanaman apakah yang diferensiasi pucuk bunganya dipengaruhi oleh lama waktu gelap yang lebih panjang dari waktu tertentu (tanaman hari pendek)?",
-                options: [
-                    "A. Bayam dan kol",
-                    "B. Stroberi dan bunga krisan",
-                    "C. Lobak dan brokoli"
-                ],
+                options: ["A. Bayam dan kol", "B. Stroberi dan bunga krisan", "C. Lobak dan brokoli"],
                 answer: 1,
                 explanation: "Stroberi dan bunga krisan merupakan contoh tanaman hari pendek di mana diferensiasi pucuk bunganya terjadi jika waktu gelap lebih panjang."
             },
             {
                 id: 4,
                 question: "Apa syarat utama agar benih dapat bertunas dengan baik?",
-                options: [
-                    "A. Cahaya matahari penuh, pupuk kimia, dan suhu dingin",
-                    "B. Air, suhu udara yang sesuai, dan oksigen",
-                    "C. Tanah berpasir, kelembapan tinggi, dan karbon dioksida"
-                ],
+                options: ["A. Cahaya matahari penuh, pupuk kimia, dan suhu dingin", "B. Air, suhu udara yang sesuai, dan oksigen", "C. Tanah berpasir, kelembapan tinggi, dan karbon dioksida"],
                 answer: 1,
                 explanation: "Tiga syarat utama untuk benih bertunas adalah memerlukan air, suhu udara yang sesuai, dan oksigen."
             },
             {
                 id: 5,
                 question: "Bagaimana perlakuan penutupan tanah untuk benih yang bersifat fotoblastik positif?",
-                options: [
-                    "A. Ditutup dengan tanah tebal agar terlindung dari cahaya",
-                    "B. Tidak perlu ditutup tanah sama sekali",
-                    "C. Ditutup dengan tanah tipis"
-                ],
+                options: ["A. Ditutup dengan tanah tebal agar terlindung dari cahaya", "B. Tidak perlu ditutup tanah sama sekali", "C. Ditutup dengan tanah tipis"],
                 answer: 2,
                 explanation: "Benih fotoblastik positif adalah benih yang mudah bertunas jika diterangi sinar, sehingga ditutup dengan tanah tipis."
             },
             {
                 id: 6,
                 question: "Apa keunggulan utama dari proses pembibitan dibandingkan penanaman benih langsung di lahan?",
-                options: [
-                    "A. Memperpanjang masa budidaya di lahan secara keseluruhan",
-                    "B. Melindungi bibit dari perubahan iklim, penyakit, dan hama",
-                    "C. Mengurangi kebutuhan air secara drastis pada media tanam"
-                ],
+                options: ["A. Memperpanjang masa budidaya di lahan secara keseluruhan", "B. Melindungi bibit dari perubahan iklim, penyakit, dan hama", "C. Mengurangi kebutuhan air secara drastis pada media tanam"],
                 answer: 1,
                 explanation: "Keunggulan pembibitan antara lain bibit dapat dilindungi dari perubahan iklim, penyakit, dan hama serta pertumbuhannya lebih seragam."
             },
             {
                 id: 7,
                 question: "Tekstur tanah jenis apa yang memiliki persentase kandungan tanah liat 50,0% atau lebih serta memiliki kemampuan penampungan nutrisi yang baik tetapi pembuangan airnya tidak baik?",
-                options: [
-                    "A. Geluh",
-                    "B. Lempung",
-                    "C. Pasir"
-                ],
+                options: ["A. Geluh", "B. Lempung", "C. Pasir"],
                 answer: 1,
                 explanation: "Tanah lempung memiliki kandungan tanah liat ≥ 50,0%, kemampuan penampungan nutrisi baik, namun kemampuan pembuangan airnya tidak baik."
             },
             {
                 id: 8,
                 question: "Berapa kisaran pH tanah yang tepat untuk pertumbuhan sebagian besar tanaman di Jepang?",
-                options: [
-                    "A. 4,0 sampai 5,0",
-                    "B. 5,5 sampai 6,5",
-                    "C. 7,5 sampai 8,5"
-                ],
+                options: ["A. 4,0 sampai 5,0", "B. 5,5 sampai 6,5", "C. 7,5 sampai 8,5"],
                 answer: 1,
                 explanation: "Untuk pertumbuhan sebagian besar tanaman di Jepang, tingkat keasaman (pH) yang tepat adalah 5,5 sampai 6,5."
             },
             {
                 id: 9,
                 question: "Apa bahan yang digunakan untuk memperbaiki tanah yang bersifat asam di Jepang?",
-                options: [
-                    "A. Kapur atau kapur magnesium",
-                    "B. Amonium sulfat dan urea",
-                    "C. Kalium klorida dan superfosfat"
-                ],
+                options: ["A. Kapur atau kapur magnesium", "B. Amonium sulfat dan urea", "C. Kalium klorida dan superfosfat"],
                 answer: 0,
                 explanation: "Untuk memperbaiki tanah bersifat asam, dilakukan penaburan kapur atau kapur magnesium dalam jumlah yang tepat."
             },
             {
                 id: 10,
                 question: "Apa penyebab utama terjadinya dampak negatif dari penanaman berurutan (monokultur terus-menerus)?",
-                options: [
-                    "A. Peningkatan jumlah nutrisi tertentu secara berlebihan",
-                    "B. Bertambahnya patogen dan hama seperti nematoda di dalam tanah",
-                    "C. Penurunan kadar gas oksigen di udara sekitar daun"
-                ],
+                options: ["A. Peningkatan jumlah nutrisi tertentu secara berlebihan", "B. Bertambahnya patogen dan hama seperti nematoda di dalam tanah", "C. Penurunan kadar gas oksigen di udara sekitar daun"],
                 answer: 1,
                 explanation: "Penanaman berurutan menyebabkan patogen dalam tanah bertambah, hama seperti nematoda meningkat, dan nutrisi tertentu berkurang."
             },
             {
                 id: 11,
                 question: "Unsur hara apa saja yang dikenal sebagai \"tiga zat dalam pupuk\" (unsur makro utama)?",
-                options: [
-                    "A. Kalsium, Magnesium, dan Sulfur",
-                    "B. Nitrogen, Fosfor, dan Kalium",
-                    "C. Besi, Tembaga, dan Seng"
-                ],
+                options: ["A. Kalsium, Magnesium, dan Sulfur", "B. Nitrogen, Fosfor, dan Kalium", "C. Besi, Tembaga, dan Seng"],
                 answer: 1,
                 explanation: "Tiga zat utama dalam pupuk adalah Nitrogen (N), Fosfor (P), dan Kalium (K)."
             },
             {
                 id: 12,
                 question: "Apa dampak utama jika tanaman mendapatkan kelebihan unsur Nitrogen (N)?",
-                options: [
-                    "A. Tanaman tumbuh lembek serta batang dan daun terlalu panjang",
-                    "B. Proses pemekaran bunga dan pembuahan terhenti total",
-                    "C. Akar tanaman menjadi sangat kaku dan kering"
-                ],
+                options: ["A. Tanaman tumbuh lembek serta batang dan daun terlalu panjang", "B. Proses pemekaran bunga dan pembuahan terhenti total", "C. Akar tanaman menjadi sangat kaku dan kering"],
                 answer: 0,
                 explanation: "Apabila nitrogen berlebihan, terutama akan memperpanjang batang dan daun, membuat warna daun tua, dan tanaman tumbuh lembek."
             },
             {
                 id: 13,
                 question: "Apa yang dimaksud dengan pupuk majemuk buatan tinggi?",
-                options: [
-                    "A. Pupuk yang hanya mengandung satu unsur hara saja",
-                    "B. Pupuk buatan yang mengandung 2 zat atau lebih dari N, P, K dengan kandungan total 30% atau lebih",
-                    "C. Pupuk organik yang berasal dari sisa ikan dan bubuk tulang"
-                ],
+                options: ["A. Pupuk yang hanya mengandung satu unsur hara saja", "B. Pupuk buatan yang mengandung 2 zat atau lebih dari N, P, K dengan kandungan total 30% atau lebih", "C. Pupuk organik yang berasal dari sisa ikan dan bubuk tulang"],
                 answer: 1,
                 explanation: "Pupuk buatan yang mengandung 2 zat atau lebih dari nitrogen, fosfor, dan kalium dengan kandungan total 30% atau lebih disebut pupuk buatan tinggi."
             },
             {
                 id: 14,
                 question: "Apa tujuan utama dari pembuatan bedengan tinggi di lahan pertanian?",
-                options: [
-                    "A. Meningkatkan konsentrasi garam agar tidak ditumbuhi gulma",
-                    "B. Memperbaiki fungsi pembuangan air dan ventilasi tanah",
-                    "C. Mempercepat penguapan air tanah saat musim kemarau"
-                ],
+                options: ["A. Meningkatkan konsentrasi garam agar tidak ditumbuhi gulma", "B. Memperbaiki fungsi pembuangan air dan ventilasi tanah", "C. Mempercepat penguapan air tanah saat musim kemarau"],
                 answer: 1,
                 explanation: "Tujuan pembuatan bedengan adalah menimbun tanah lebih tinggi untuk memperbaiki fungsi pembuangan air dan ventilasi."
             },
             {
                 id: 15,
                 question: "Apa fungsi dari pemangkasan tunas samping pada tanaman budidaya seperti tomat?",
-                options: [
-                    "A. Mencegah berbuah berlebihan, melebatkan daun, dan agar mendapat sinar matahari dengan baik",
-                    "B. Mempercepat penyerapan air di dalam alur bedengan",
-                    "C. Mengubah arah pertumbuhan akar agar masuk lebih dalam ke tanah"
-                ],
+                options: ["A. Mencegah berbuah berlebihan, melebatkan daun, dan agar mendapat sinar matahari dengan baik", "B. Mempercepat penyerapan air di dalam alur bedengan", "C. Mengubah arah pertumbuhan akar agar masuk lebih dalam ke tanah"],
                 answer: 0,
                 explanation: "Tunas samping dihilangkan untuk mencegah berbuah berlebihan, mencegah daun terlalu lebat, dan memaksimalkan paparan sinar matahari."
             },
             {
                 id: 16,
                 question: "Apa tujuan utama dari proses pra-pendinginan (pre-cooling) setelah sayur dan buah dipanen?",
-                options: [
-                    "A. Mengubah warna kulit buah agar lebih mengkilap",
-                    "B. Menjaga kesegaran dengan menurunkan panas produk secara cepat",
-                    "C. Membunuh seluruh mikroorganisme patogen pada permukaan buah"
-                ],
+                options: ["A. Mengubah warna kulit buah agar lebih mengkilap", "B. Menjaga kesegaran dengan menurunkan panas produk secara cepat", "C. Membunuh seluruh mikroorganisme patogen pada permukaan buah"],
                 answer: 1,
                 explanation: "Pra-pendinginan bertujuan mendinginkan sayur dan buah yang dipanen secara cepat untuk menjaga kesegarannya."
             },
             {
                 id: 17,
                 question: "Apa efek dari penggunaan mulsa plastik berwarna hitam di lahan pertanian?",
-                options: [
-                    "A. Memiliki efek tertinggi dalam meningkatkan suhu tanah",
-                    "B. Mencegah tumbuhnya gulma",
-                    "C. Mencegah suhu tanah agar tidak meningkat"
-                ],
+                options: ["A. Memiliki efek tertinggi dalam meningkatkan suhu tanah", "B. Mencegah tumbuhnya gulma", "C. Mencegah suhu tanah agar tidak meningkat"],
                 answer: 1,
                 explanation: "Mulsa plastik berwarna hitam berfungsi utama untuk mencegah gulma karena menghalangi cahaya menembus tanah."
             },
             {
                 id: 18,
                 question: "Mengapa dilarang membakar membran plastik bekas mulsa atau terowongan di lahan pertanian?",
-                options: [
-                    "A. Karena dapat memicu ledakan besar di dalam tanah",
-                    "B. Berdasarkan undang-undang dilarang karena dikhawatirkan menimbulkan gas berbahaya",
-                    "C. Karena abu pembakarannya dapat meracuni air irigasi sawah"
-                ],
+                options: ["A. Karena dapat memicu ledakan besar di dalam tanah", "B. Berdasarkan undang-undang dilarang karena dikhawatirkan menimbulkan gas berbahaya", "C. Karena abu pembakarannya dapat meracuni air irigasi sawah"],
                 answer: 1,
                 explanation: "Berdasarkan undang-undang, dilarang membakar membran di lahan karena dikhawatirkan menimbulkan gas berbahaya."
             },
             {
                 id: 19,
                 question: "Pestisida kimia apakah yang digunakan khusus untuk pencegahan dan pengendalian penyakit tanaman?",
-                options: [
-                    "A. Insektisida",
-                    "B. Herbisida",
-                    "C. Fungisida"
-                ],
+                options: ["A. Insektisida", "B. Herbisida", "C. Fungisida"],
                 answer: 2,
                 explanation: "Fungisida adalah pestisida kimia untuk pencegahan dan pengendalian penyakit, sedangkan insektisida untuk hama dan herbisida untuk gulma."
             },
             {
                 id: 20,
                 question: "Tanaman apa yang dapat menurunkan kepadatan nematoda di dalam tanah jika dibudidayakan di sekitar lahan?",
-                options: [
-                    "A. Bunga marigold",
-                    "B. Tanaman padi Japonica",
-                    "C. Pohon teh (Camellia sinensis)"
-                ],
+                options: ["A. Bunga marigold", "B. Tanaman padi Japonica", "C. Pohon teh (Camellia sinensis)"],
                 answer: 0,
                 explanation: "Kepadatan nematoda dalam tanah akan berkurang jika membudidayakan bunga marigold."
             },
             {
                 id: 21,
                 question: "Dari sisi mana operator harus naik dan turun pada traktor yang dinaiki?",
-                options: [
-                    "A. Sisi kanan traktor",
-                    "B. Sisi kiri traktor",
-                    "C. Bagian belakang dekat rotary"
-                ],
+                options: ["A. Sisi kanan traktor", "B. Sisi kiri traktor", "C. Bagian belakang dekat rotary"],
                 answer: 1,
                 explanation: "Aturan keselamatan pengoperasian traktor yang dinaiki mewajibkan operator untuk naik dan turun dari sisi kiri traktor."
             },
             {
                 id: 22,
                 question: "Apa jenis sarung tangan yang dilarang keras digunakan saat melakukan penyemprotan pestisida?",
-                options: [
-                    "A. Sarung tangan karet kedap air",
-                    "B. Sarung tangan kerja buatan kain (gunte)",
-                    "C. Sarung tangan pelindung khusus kimia"
-                ],
+                options: ["A. Sarung tangan karet kedap air", "B. Sarung tangan kerja buatan kain (gunte)", "C. Sarung tangan pelindung khusus kimia"],
                 answer: 1,
                 explanation: "Dilarang menggunakan sarung tangan kerja buatan kain karena dapat menjadi basah dan menyerap zat kimia ke kulit."
             },
             {
                 id: 23,
                 question: "Bagaimana posisi ujung bawah celana dan lengan baju saat mengenakan pakaian pelindung penyemprotan pestisida?",
-                options: [
-                    "A. Ujung celana dimasukkan ke dalam sepatu bot, dan lengan baju menutupi bagian atas sarung tangan karet",
-                    "B. Lengan baju dilipat ke atas siku dan celana digulung di atas mata kaki",
-                    "C. Celana dikeluarkan di luar sepatu bot tanpa penutup"
-                ],
+                options: ["A. Ujung celana dimasukkan ke dalam sepatu bot, dan lengan baju menutupi bagian atas sarung tangan karet", "B. Lengan baju dilipat ke atas siku dan celana digulung di atas mata kaki", "C. Celana dikeluarkan di luar sepatu bot tanpa penutup"],
                 answer: 0,
                 explanation: "Lengan panjang baju atas harus menutupi bagian atas sarung tangan, dan ujung bawah celana dilapisi dengan sepatu bot agar zat kimia tidak masuk."
             },
             {
                 id: 24,
                 question: "Wadah bahan bakar apakah yang diperbolehkan secara hukum untuk menyimpan bensin?",
-                options: [
-                    "A. Tangki polietilen warna merah kapasitas 20 liter",
-                    "B. Wadah khusus dari logam",
-                    "C. Jerigen plastik transparan tipis"
-                ],
+                options: ["A. Tangki polietilen warna merah kapasitas 20 liter", "B. Wadah khusus dari logam", "C. Jerigen plastik transparan tipis"],
                 answer: 1,
                 explanation: "Bensin harus disimpan di wadah dari logam; dilarang menyimpan bensin di tangki polietilen plastik untuk minyak tanah."
             },
             {
                 id: 25,
                 question: "Berapa batas maksimum penyimpanan minyak ringan (solar) di dalam wadah plastik yang diizinkan?",
-                options: [
-                    "A. Maksimum sampai 10 liter",
-                    "B. Maksimum sampai 30 liter",
-                    "C. Maksimum sampai 100 liter"
-                ],
+                options: ["A. Maksimum sampai 10 liter", "B. Maksimum sampai 30 liter", "C. Maksimum sampai 100 liter"],
                 answer: 1,
                 explanation: "Minyak ringan dapat disimpan di wadah plastik maksimum sampai 30 liter."
             },
             {
                 id: 26,
                 question: "Perilaku manakah yang dilarang keras saat menggunakan tangga di perkebunan?",
-                options: [
-                    "A. Memasang stoper (rangkaian dan pengunci) dengan benar",
-                    "B. Berdiri di bagian anak tangga",
-                    "C. Menaiki atau menunggangi papan atas tangga"
-                ],
+                options: ["A. Memasang stoper (rangkaian dan pengunci) dengan benar", "B. Berdiri di bagian anak tangga", "C. Menaiki atau menunggangi papan atas tangga"],
                 answer: 2,
                 explanation: "Perilaku yang dilarang saat menggunakan tangga meliputi tidak memasang pengunci, menaiki papan atas, menunggangi papan atas, dan membungkukkan badan berlebih."
             },
             {
                 id: 27,
                 question: "Apa tindakan awal yang harus dilakukan jika seseorang merasa pening atau mual selama penyemprotan pestisida?",
-                options: [
-                    "A. Melanjutkan pekerjaan hingga tangki pestisida habis",
-                    "B. Segera pergi ke dokter untuk diperiksa",
-                    "C. Meminum air dingin di bawah pohon yang teduh"
-                ],
+                options: ["A. Melanjutkan pekerjaan hingga tangki pestisida habis", "B. Segera pergi ke dokter untuk diperiksa", "C. Meminum air dingin di bawah pohon yang teduh"],
                 answer: 1,
                 explanation: "Apabila terasa kondisi tidak normal pada badan seperti pening atau mual selama atau sesudah penyemprotan, segera pergi ke dokter untuk diperiksa."
             },
             {
                 id: 28,
                 question: "Berapa voltase sumber daya listrik yang biasa digunakan untuk mesin pengering, penggerak, dan alat pemanas di pertanian?",
-                options: [
-                    "A. AC 12V searah",
-                    "B. AC 200V arus bolak-balik tiga fasa",
-                    "C. AC 50V arus lemah"
-                ],
+                options: ["A. AC 12V searah", "B. AC 200V arus bolak-balik tiga fasa", "C. AC 50V arus lemah"],
                 answer: 1,
                 explanation: "Sumber daya listrik 200V digunakan untuk mesin pengering, penggerak, alat pemanas, dll., dan harus ditangani secara hati-hati."
             },
             {
                 id: 29,
                 question: "Mengapa dilarang menyentuh steker listrik dengan tangan telanjang yang basah?",
-                options: [
-                    "A. Dapat menyebabkan korsleting pada traktor tangan",
-                    "B. Dapat menyebabkan kecelakaan sengatan listrik yang berbahaya",
-                    "C. Menyebabkan komponen steker berkarat seketika"
-                ],
+                options: ["A. Dapat menyebabkan korsleting pada traktor tangan", "B. Dapat menyebabkan kecelakaan sengatan listrik yang berbahaya", "C. Menyebabkan komponen steker berkarat seketika"],
                 answer: 1,
                 explanation: "Menyentuh steker dengan tangan telanjang yang basah sangat berbahaya dan dapat menyebabkan kecelakaan sengatan listrik."
             },
             {
                 id: 30,
                 question: "Apa yang harus dilakukan pada traktor yang dinaiki setelah pekerjaan selesai dilakukan?",
-                options: [
-                    "A. Membiarkan perlengkapan tetap terpasang tanpa dicuci",
-                    "B. Mengosongkan tangki bahan bakar sepenuhnya",
-                    "C. Mengisi penuh tangki bahan bakar dan melepaskan perlengkapan yang dicuci"
-                ],
+                options: ["A. Membiarkan perlengkapan tetap terpasang tanpa dicuci", "B. Mengosongkan tangki bahan bakar sepenuhnya", "C. Mengisi penuh tangki bahan bakar dan melepaskan perlengkapan yang dicuci"],
                 answer: 2,
                 explanation: "Setelah pekerjaan selesai, perlengkapan yang dipasang dicuci/diturunkan, dan tangki bahan bakar diisi penuh."
             },
             {
                 id: 31,
                 question: "Apa jenis varietas padi Asia yang paling banyak dibudidayakan di Jepang?",
-                options: [
-                    "A. Indica",
-                    "B. Japonica",
-                    "C. Afrika"
-                ],
+                options: ["A. Indica", "B. Japonica", "C. Afrika"],
                 answer: 1,
                 explanation: "Padi Asia secara garis besar dibagi menjadi Indica dan Japonica, namun yang kebanyakan dibudidayakan di Jepang adalah Japonica."
             },
             {
                 id: 32,
                 question: "Berapa suhu dan lama waktu acuan untuk proses perendaman benih padi agar menyerap cukup air?",
-                options: [
-                    "A. Suhu 30-32°C selama 1 hari",
-                    "B. Suhu 10-15°C selama 7 sampai 10 hari (acuan 100°C suhu akumulasi)",
-                    "C. Suhu 0°C selama 1 bulan"
-                ],
+                options: ["A. Suhu 30-32°C selama 1 hari", "B. Suhu 10-15°C selama 7 sampai 10 hari (acuan 100°C suhu akumulasi)", "C. Suhu 0°C selama 1 bulan"],
                 answer: 1,
                 explanation: "Perendaman benih padi dilakukan selama 7 hingga 10 hari dalam air bersuhu 10-15°C dengan acuan 100°C suhu akumulasi."
             },
             {
                 id: 33,
                 question: "Seperti apakah bentuk benih padi yang ideal setelah proses mempercepat pertunasan (pemberian kehangatan 30-32°C)?",
-                options: [
-                    "A. Bentuk seperti dada merpati (bertunas sekitar 1 mm)",
-                    "B. Berakar panjang hingga 5 cm",
-                    "C. Kulit padi terkelupas sepenuhnya"
-                ],
+                options: ["A. Bentuk seperti dada merpati (bertunas sekitar 1 mm)", "B. Berakar panjang hingga 5 cm", "C. Kulit padi terkelupas sepenuhnya"],
                 answer: 0,
                 explanation: "Menjelang tanam, pertunasan didorong hingga bentuk benih seperti dada merpati, yaitu bertunas sekitar 1 mm."
             },
             {
                 id: 34,
                 question: "Apa istilah proses mengaduk tanah sawah yang telah diberi air hingga empuk menggunakan traktor sebelum penanaman padi?",
-                options: [
-                    "A. Pembajakan kering",
-                    "B. Pelumpuran",
-                    "C. Pengeringan sawah"
-                ],
+                options: ["A. Pembajakan kering", "B. Pelumpuran", "C. Pengeringan sawah"],
                 answer: 1,
                 explanation: "Pelumpuran adalah proses memasukkan air ke sawah lalu mengaduk tanahnya hingga empuk untuk persiapan tanam pindah."
             },
             {
                 id: 35,
                 question: "Berapa kisaran kadar air gabah saat dipanen yang kemudian harus dikeringkan hingga mencapai 14-15%?",
-                options: [
-                    "A. 10 hingga 15%",
-                    "B. 20 hingga 27%",
-                    "C. 40 hingga 50%"
-                ],
+                options: ["A. 10 hingga 15%", "B. 20 hingga 27%", "C. 40 hingga 50%"],
                 answer: 1,
                 explanation: "Gabah saat dipanen mengandung kadar air tinggi yaitu 20 hingga 27%, sehingga perlu dikeringkan hingga 14-15%."
             },
             {
                 id: 36,
                 question: "Apa kepanjangan dan fungsi dari mesin \"Combine\" yang banyak digunakan dalam pemanenan padi di Jepang?",
-                options: [
-                    "A. Mesin pemotong rumput dan pencuci gabah",
-                    "B. Mesin pemanen kombinasi dari mesin pemanen dan mesin perontok padi",
-                    "C. Mesin penanam bibit dan penyebar pupuk otomatis"
-                ],
+                options: ["A. Mesin pemotong rumput dan pencuci gabah", "B. Mesin pemanen kombinasi dari mesin pemanen dan mesin perontok padi", "C. Mesin penanam bibit dan penyebar pupuk otomatis"],
                 answer: 1,
                 explanation: "Combine adalah mesin pemanen kombinasi dari fungsi pemanen dan perontok padi (di Jepang umumnya tipe perontokan otomatis)."
             },
             {
                 id: 37,
                 question: "Apa keuntungan utama dari metode \"budidaya padi dengan penanaman jarak yang lebar\"?",
-                options: [
-                    "A. Meningkatkan jumlah kotak pembibitan hingga 80%",
-                    "B. Mengurangi jumlah kotak pembibitan sebesar 40% atau lebih serta menekan biaya produksi",
-                    "C. Mempercepat masa panen hingga 2 bulan lebih awal"
-                ],
+                options: ["A. Meningkatkan jumlah kotak pembibitan hingga 80%", "B. Mengurangi jumlah kotak pembibitan sebesar 40% atau lebih serta menekan biaya produksi", "C. Mempercepat masa panen hingga 2 bulan lebih awal"],
                 answer: 1,
                 explanation: "Melebarkan jarak antar bibit mengurangi jumlah kotak pembibitan hingga 40% lebih sehingga menghemat biaya dan waktu kerja."
             },
             {
                 id: 38,
                 question: "Apa yang dimaksud dengan \"WCS padi\" dalam konteks pemanfaatan tanaman padi?",
-                options: [
-                    "A. Beras kualitas super untuk konsumsi ekspor",
-                    "B. Pakan silase seluruh tanaman yang memanfaatkan malai, batang, dan daun",
-                    "C. Pupuk organik cair dari jerami padi fermentasi"
-                ],
+                options: ["A. Beras kualitas super untuk konsumsi ekspor", "B. Pakan silase seluruh tanaman yang memanfaatkan malai, batang, dan daun", "C. Pupuk organik cair dari jerami padi fermentasi"],
                 answer: 1,
                 explanation: "WCS padi (Whole Crop Silage) adalah pakan silase dari seluruh bagian tanaman padi (malai, batang, daun) yang dipanen sebelum matang."
             },
             {
                 id: 39,
                 question: "Kapan waktu pemberian pupuk tambahan (pupuk untuk malai) pada budidaya padi?",
-                options: [
-                    "A. 1 hingga 5 hari setelah penanaman bibit",
-                    "B. Sekitar 15 sampai 25 hari sebelum malai keluar",
-                    "C. Tepat pada hari pemanenan gabah"
-                ],
+                options: ["A. 1 hingga 5 hari setelah penanaman bibit", "B. Sekitar 15 sampai 25 hari sebelum malai keluar", "C. Tepat pada hari pemanenan gabah"],
                 answer: 1,
                 explanation: "Pupuk tambahan diberikan sekitar 15 sampai 25 hari sebelum malai keluar untuk mendorong diferensiasi lemma."
             },
             {
                 id: 40,
                 question: "Apa nama penyakit padi yang menyerang bagian daun dan dikendalikan saat pengelolaan sawah?",
-                options: [
-                    "A. Penyakit busuk akar hitam",
-                    "B. Penyakit blas (penyakit blas pada daun)",
-                    "C. Penyakit layu bakteri monokultur"
-                ],
+                options: ["A. Penyakit busuk akar hitam", "B. Penyakit blas (penyakit blas pada daun)", "C. Penyakit layu bakteri monokultur"],
                 answer: 1,
                 explanation: "Penyakit blas pada daun merupakan salah satu penyakit utama pada padi yang perlu dikendalikan bersama hama lainnya."
             },
             {
                 id: 41,
                 question: "Termasuk dalam suku (famili) apakah tanaman sayuran buah seperti tomat, terong, dan kentang?",
-                options: [
-                    "A. Suku labu-labuan (Cucurbitaceae)",
-                    "B. Suku terong-terongan (Solanaceae)",
-                    "C. Suku kubis-kubisan (Brassicaceae)"
-                ],
+                options: ["A. Suku labu-labuan (Cucurbitaceae)", "B. Suku terong-terongan (Solanaceae)", "C. Suku kubis-kubisan (Brassicaceae)"],
                 answer: 1,
                 explanation: "Tomat, terong, paprika, dan kentang termasuk ke dalam suku terong-terongan (Solanaceae)."
             },
             {
                 id: 42,
                 question: "Berapa kisaran nilai kadar air dalam tanah yang dianggap tepat untuk pertumbuhan sayuran di dalam fasilitas?",
-                options: [
-                    "A. 10% sampai 20%",
-                    "B. 35% sampai 55%",
-                    "C. 80% sampai 95%"
-                ],
+                options: ["A. 10% sampai 20%", "B. 35% sampai 55%", "C. 80% sampai 95%"],
                 answer: 1,
                 explanation: "Nilai kadar air dalam tanah yang tepat untuk pertumbuhan tanaman adalah antara 35% sampai 55%."
             },
             {
                 id: 43,
                 question: "Apa karakteristik dari benih sayur wortel dan letus berkaitan dengan cahaya?",
-                options: [
-                    "A. Bersifat fotoblastik negatif (susah bertunas jika ada cahaya)",
-                    "B. Bersifat fotoblastik positif (mudah bertunas jika diterangi cahaya)",
-                    "C. Tidak dipengaruhi sama sekali oleh cahaya matahari"
-                ],
+                options: ["A. Bersifat fotoblastik negatif (susah bertunas jika ada cahaya)", "B. Bersifat fotoblastik positif (mudah bertunas jika diterangi cahaya)", "C. Tidak dipengaruhi sama sekali oleh cahaya matahari"],
                 answer: 1,
                 explanation: "Wortel dan letus merupakan contoh benih yang bersifat fotoblastik positif (mudah berkecambah jika diterangi cahaya)."
             },
             {
                 id: 44,
                 question: "Apa keunggulan dari penggunaan \"Green House\" kaca dibandingkan rumah kaca plastik?",
-                options: [
-                    "A. Biaya pembuatannya jauh lebih murah",
-                    "B. Mempunyai daya tahan yang kuat dan dapat digunakan selama bertahun-tahun",
-                    "C. Berat strukturnya sangat ringan dan mudah dipindah-pindah"
-                ],
+                options: ["A. Biaya pembuatannya jauh lebih murah", "B. Mempunyai daya tahan yang kuat dan dapat digunakan selama bertahun-tahun", "C. Berat strukturnya sangat ringan dan mudah dipindah-pindah"],
                 answer: 1,
                 explanation: "Green house kaca memiliki daya tahan yang kuat, cahaya tembus dengan baik, dan dapat digunakan bertahun-tahun meski biaya pembuatannya mahal."
             },
             {
                 id: 45,
                 question: "Apa fungsi dari pemasangan \"Rumah Pelindung Hujan\" (rain shelter) pada budidaya sayuran?",
-                options: [
-                    "A. Menaikkan suhu udara hingga 40°C di malam hari",
-                    "B. Mencegah penyakit, hama, dan pecahnya buah karena tanaman tidak terkena hujan langsung",
-                    "C. Mempercepat penyerapan pupuk daun secara instan"
-                ],
+                options: ["A. Menaikkan suhu udara hingga 40°C di malam hari", "B. Mencegah penyakit, hama, dan pecahnya buah karena tanaman tidak terkena hujan langsung", "C. Mempercepat penyerapan pupuk daun secara instan"],
                 answer: 1,
                 explanation: "Rumah pelindung hujan hanya menutupi bagian atap untuk mencegah penyakit, hama, dan pecahnya buah akibat siraman air hujan langsung."
             },
             {
                 id: 46,
                 question: "Apa urutan yang benar saat melakukan ventilasi alami di dalam fasilitas rumah kaca?",
-                options: [
-                    "A. Membuka bagian samping terlebih dahulu, baru membuka jendela atap",
-                    "B. Membuka penutup dalam, kemudian membuka jendela atap, lalu membuka bagian samping jika suhu masih tinggi",
-                    "C. Menyalakan kipas angin paksa sebelum membuka jendela atap"
-                ],
+                options: ["A. Membuka bagian samping terlebih dahulu, baru membuka jendela atap", "B. Membuka penutup dalam, kemudian membuka jendela atap, lalu membuka bagian samping jika suhu masih tinggi", "C. Menyalakan kipas angin paksa sebelum membuka jendela atap"],
                 answer: 1,
                 explanation: "Urutan ventilasi alami adalah membuka penutup dalam, membuka jendela atap, dan jika suhu masih tinggi baru membuka bagian samping."
             },
             {
                 id: 47,
                 question: "Apa tujuan dari penambahan gas karbon dioksida (CO2) di dalam fasilitas rumah kaca yang tertutup?",
-                options: [
-                    "A. Mendorong proses fotosintesis tanaman",
-                    "B. Menurunkan kelembapan malam hari agar tidak terjadi kondensasi",
-                    "C. Mengusir serangga hama tanpa menggunakan pestisida kimia"
-                ],
+                options: ["A. Mendorong proses fotosintesis tanaman", "B. Menurunkan kelembapan malam hari agar tidak terjadi kondensasi", "C. Mengusir serangga hama tanpa menggunakan pestisida kimia"],
                 answer: 0,
                 explanation: "Penambahan gas karbon dioksida dengan alat penghasil CO2 bertujuan mendorong proses fotosintesis tanaman di fasilitas tertutup."
             },
             {
                 id: 48,
                 question: "Bagaimana cara membaca termometer maksimum dan minimum dengan benar pada indikator sisi kanan?",
-                options: [
-                    "A. Memeriksa ujung atas sisi kiri cairan",
-                    "B. Memeriksa ujung bawah sisi kanan (indikator suhu bagian dalam cairan) untuk suhu maksimum",
-                    "C. Melihat angka pada bagian tengah wadah merkuri"
-                ],
+                options: ["A. Memeriksa ujung atas sisi kiri cairan", "B. Memeriksa ujung bawah sisi kanan (indikator suhu bagian dalam cairan) untuk suhu maksimum", "C. Melihat angka pada bagian tengah wadah merkuri"],
                 answer: 1,
                 explanation: "Untuk mengetahui suhu udara maksimum, diperiksa ujung bawah sisi kanan (indikator suhu udara bagian dalam cairan)."
             },
             {
                 id: 49,
                 question: "Apa yang dimaksud dengan metode \"Hidroponik\"?",
-                options: [
-                    "A. Budidaya tanaman menggunakan tanah andosol steril",
-                    "B. Metode membudidayakan tanaman dengan larutan inkubasi (air terlarut nutrisi) tanpa menggunakan tanah",
-                    "C. Sistem penanaman benih langsung di sawah berlumpur"
-                ],
+                options: ["A. Budidaya tanaman menggunakan tanah andosol steril", "B. Metode membudidayakan tanaman dengan larutan inkubasi (air terlarut nutrisi) tanpa menggunakan tanah", "C. Sistem penanaman benih langsung di sawah berlumpur"],
                 answer: 1,
                 explanation: "Hidroponik adalah metode budidaya tanaman menggunakan larutan nutrisi tanpa menggunakan media tanah."
             },
             {
                 id: 50,
                 question: "Apa manfaat utama dari teknik \"okulasi\" (penyambungan batang atas dan bawah) pada sayuran seperti terong dan timun?",
-                options: [
-                    "A. Bibit menjadi tahan terhadap penyakit dan hama serta meningkatkan jumlah panen",
-                    "B. Mengubah warna buah menjadi transparan",
-                    "C. Mempercepat masa pembungaan hanya dalam 3 hari"
-                ],
+                options: ["A. Bibit menjadi tahan terhadap penyakit dan hama serta meningkatkan jumlah panen", "B. Mengubah warna buah menjadi transparan", "C. Mempercepat masa pembungaan hanya dalam 3 hari"],
                 answer: 0,
                 explanation: "Manfaat okulasi adalah bibit menjadi kuat terhadap penyakit/hama (menggunakan batang bawah tahan) dan jumlah panen meningkat."
             },
             {
                 id: 51,
                 question: "Apa perbedaan utama antara \"pohon buah peluruh\" dan \"pohon buah hijau abadi\"?",
-                options: [
-                    "A. Pohon peluruh daunnya gugur pada musim dingin, sedangkan hijau abadi berdaun sepanjang tahun",
-                    "B. Pohon peluruh hidup di air, sedangkan hijau abadi di padang pasir",
-                    "C. Pohon peluruh menghasilkan buah tanpa bunga, sedangkan hijau abadi melalui penyerbukan"
-                ],
+                options: ["A. Pohon peluruh daunnya gugur pada musim dingin, sedangkan hijau abadi berdaun sepanjang tahun", "B. Pohon peluruh hidup di air, sedangkan hijau abadi di padang pasir", "C. Pohon peluruh menghasilkan buah tanpa bunga, sedangkan hijau abadi melalui penyerbukan"],
                 answer: 0,
                 explanation: "Pohon buah peluruh daunnya gugur pada musim dingin (contoh: apel, anggur), sedangkan hijau abadi berdaun sepanjang tahun (contoh: jeruk unshiu)."
             },
             {
                 id: 52,
                 question: "Apa yang dimaksud dengan fenomena \"Partenokarpi\" pada buah?",
-                options: [
-                    "A. Buah membusuk sebelum matang akibat kelebihan nitrogen",
-                    "B. Buah bertumbuh dan berkembang tanpa melalui proses penyerbukan",
-                    "C. Buah tumbuh dengan biji yang sangat keras di bagian tengah"
-                ],
+                options: ["A. Buah membusuk sebelum matang akibat kelebihan nitrogen", "B. Buah bertumbuh dan berkembang tanpa melalui proses penyerbukan", "C. Buah tumbuh dengan biji yang sangat keras di bagian tengah"],
                 answer: 1,
                 explanation: "Partenokarpi adalah kondisi di mana buah bertumbuh tanpa adanya proses penyerbukan (contohnya pada jeruk unshiu dan kesemek Hiratanenashi)."
             },
             {
                 id: 53,
                 question: "Apa tujuan dari pembuatan bentuk pohon \"metode rak\" pada tanaman anggur dan pir Jepang?",
-                options: [
-                    "A. Mempermudah traktor masuk melewati sela-sela akar",
-                    "B. Membentangkan ranting secara horizontal agar mendapat sinar matahari merata dan terhindar dari kerusakan angin",
-                    "C. Mempercepat pertumbuhan batang utama ke arah vertikal setinggi 10 meter"
-                ],
+                options: ["A. Mempermudah traktor masuk melewati sela-sela akar", "B. Membentangkan ranting secara horizontal agar mendapat sinar matahari merata dan terhindar dari kerusakan angin", "C. Mempercepat pertumbuhan batang utama ke arah vertikal setinggi 10 meter"],
                 answer: 1,
                 explanation: "Metode rak digunakan pada anggur dan pir Jepang untuk meratakan penerangan sinar matahari serta melindungi buah dari angin kencang."
             },
             {
                 id: 54,
                 question: "Apa fungsi dari pemasangan \"lembar reflektif\" di bawah pohon buah pada masa panen?",
-                options: [
-                    "A. Mencegah gulma tumbuh di sekitar pangkal batang",
-                    "B. Membuat warna buah menjadi bagus dengan merefleksikan sinar matahari",
-                    "C. Menampung air hujan agar tidak meresap ke dalam tanah"
-                ],
+                options: ["A. Mencegah gulma tumbuh di sekitar pangkal batang", "B. Membuat warna buah menjadi bagus dengan merefleksikan sinar matahari", "C. Menampung air hujan agar tidak meresap ke dalam tanah"],
                 answer: 1,
                 explanation: "Lembar reflektif dihampar di tanah saat panen untuk memantulkan sinar matahari sehingga warna buah bagian bawah menjadi bagus."
             },
             {
                 id: 55,
                 question: "Apa fungsi dari zat pengatur tumbuh \"giberelin\" pada budidaya buah anggur?",
-                options: [
-                    "A. Membuat varietas buah yang berbiji menjadi buah tanpa biji dan mendorong perbesaran buah",
-                    "B. Menggugurkan daun secara massal sebelum musim dingin",
-                    "C. Membasmi hama serangga pengisap daun anggur"
-                ],
+                options: ["A. Membuat varietas buah yang berbiji menjadi buah tanpa biji dan mendorong perbesaran buah", "B. Menggugurkan daun secara massal sebelum musim dingin", "C. Membasmi hama serangga pengisap daun anggur"],
                 answer: 0,
                 explanation: "Giberelin digunakan melalui perendaman tandan bunga untuk membuat buah anggur tanpa biji serta mendorong perbesaran buah."
             },
             {
                 id: 56,
                 question: "Apa nama mesin pertanian berukuran besar yang biasa digunakan untuk pengendalian hama di perkebunan buah?",
-                options: [
-                    "A. Combine harvester",
-                    "B. Speed Sprayer (SS)",
-                    "C. Transplanter manual"
-                ],
+                options: ["A. Combine harvester", "B. Speed Sprayer (SS)", "C. Transplanter manual"],
                 answer: 1,
                 explanation: "Speed Sprayer (SS) adalah mesin khusus pengendali hama yang sering digunakan dalam budidaya pohon buah."
             },
             {
                 id: 57,
                 question: "Apa yang dimaksud dengan istilah \"Seleksi benih\" menggunakan larutan garam dalam kegiatan pertanian?",
-                options: [
-                    "A. Pemilihan biji dengan berat jenis menggunakan larutan garam untuk menghilangkan benih cacat",
-                    "B. Pemberian pupuk garam mineral pada benih agar cepat berkecambah",
-                    "C. Sterilisasi kulit benih dari serangan jamur patogen"
-                ],
+                options: ["A. Pemilihan biji dengan berat jenis menggunakan larutan garam untuk menghilangkan benih cacat", "B. Pemberian pupuk garam mineral pada benih agar cepat berkecambah", "C. Sterilisasi kulit benih dari serangan jamur patogen"],
                 answer: 0,
                 explanation: "Seleksi benih adalah proses pemilihan benih menggunakan larutan garam berdasarkan berat jenis untuk menyisihkan benih cacat."
             },
             {
                 id: 58,
                 question: "Apa arti dari istilah \"Penghilangan kelat\" pada buah kesemek?",
-                options: [
-                    "A. Proses mendinginkan buah kesemek di bawah suhu 0°C",
-                    "B. Proses membuat tanin yang berdaya larut menjadi tidak larut (tidak larut air) secara artifisial",
-                    "C. Pemangkasan tangkai buah kesemek yang berasa pahit"
-                ],
+                options: ["A. Proses mendinginkan buah kesemek di bawah suhu 0°C", "B. Proses membuat tanin yang berdaya larut menjadi tidak larut (tidak larut air) secara artifisial", "C. Pemangkasan tangkai buah kesemek yang berasa pahit"],
                 answer: 1,
                 explanation: "Penghilangan kelat adalah proses membuat zat tanin pada kesemek kelat menjadi tidak larut air secara artifisial agar tidak sepat."
             },
             {
                 id: 59,
                 question: "Apa definisi dari \"Pemulsaan\" dalam pemeliharaan lahan pertanian?",
-                options: [
-                    "A. Proses membajak tanah sedalam 50 cm",
-                    "B. Proses menutupi permukaan tanah dengan membran plastik, jerami, dll.",
-                    "C. Penyemprotan pestisida cair secara serentak"
-                ],
+                options: ["A. Proses membajak tanah sedalam 50 cm", "B. Proses menutupi permukaan tanah dengan membran plastik, jerami, dll.", "C. Penyemprotan pestisida cair secara serentak"],
                 answer: 1,
                 explanation: "Pemulsaan adalah proses menutup permukaan tanah dengan jerami padi, membran plastik, dll. untuk mengatur suhu dan mencegah gulma."
             },
             {
                 id: 60,
                 question: "Apa yang dimaksud dengan \"Budidaya dipercepat\" (sokusei saibai)?",
-                options: [
-                    "A. Tipe penanaman untuk membudidayakan tanaman pada waktu yang lebih awal daripada budidaya biasa dengan menggunakan fasilitas",
-                    "B. Metode memanen hasil pertanian dalam waktu 24 jam setelah tanam",
-                    "C. Cara mempercepat aliran air irigasi di dalam saluran alur bedengan"
-                ],
+                options: ["A. Tipe penanaman untuk membudidayakan tanaman pada waktu yang lebih awal daripada budidaya biasa dengan menggunakan fasilitas", "B. Metode memanen hasil pertanian dalam waktu 24 jam setelah tanam", "C. Cara mempercepat aliran air irigasi di dalam saluran alur bedengan"],
                 answer: 0,
                 explanation: "Budidaya dipercepat adalah tipe penanaman untuk menghasilkan tanaman lebih awal dibanding budidaya biasa dengan bantuan fasilitas."
             },
             {
                 id: 61,
                 question: "Apa nama varietas jeruk unshiu yang paling banyak dibudidayakan di Jepang (mencapai 21%)?",
-                options: [
-                    "A. Aoshima-unshiu",
-                    "B. Miyagawawase",
-                    "C. Okitsuwase"
-                ],
+                options: ["A. Aoshima-unshiu", "B. Miyagawawase", "C. Okitsuwase"],
                 answer: 1,
                 explanation: "Varietas utama jeruk unshiu adalah Miyagawawase (21%), Aoshima-unshiu (14%), dan Okitsuwase (13%)."
             },
             {
                 id: 62,
                 question: "Varietas apel apakah yang memegang persentase budidaya terbesar di Jepang (52%)?",
-                options: [
-                    "A. Tsugaru",
-                    "B. Orin",
-                    "C. Fuji"
-                ],
+                options: ["A. Tsugaru", "B. Orin", "C. Fuji"],
                 answer: 2,
                 explanation: "Varietas utama apel di Jepang adalah Fuji (52%), disusul Tsugaru (13%) dan Orin (8%)."
             },
             {
                 id: 63,
                 question: "Apa tujuan dari pemasangan \"Kipas angin pencegah jalad\" di perkebunan buah?",
-                options: [
-                    "A. Mencegah kerusakan tanaman akibat embun beku/jalad",
-                    "B. Membantu penyerbukan bunga secara otomatis",
-                    "C. Mengeringkan buah setelah dicuci bersih"
-                ],
+                options: ["A. Mencegah kerusakan tanaman akibat embun beku/jalad", "B. Membantu penyerbukan bunga secara otomatis", "C. Mengeringkan buah setelah dicuci bersih"],
                 answer: 0,
                 explanation: "Kipas angin pencegah jalad digunakan untuk mencegah kerusakan akibat jalad (embun beku) di perkebunan buah."
             },
             {
                 id: 64,
                 question: "Apa bentuk penanganan khusus sebelum penyimpanan yang dilakukan pada buah jenis sitrus?",
-                options: [
-                    "A. Direndam dalam air mendidih selama 5 menit",
-                    "B. Mengeringkan beberapa persen kadar air sebelum disimpan",
-                    "C. Membungkus setiap buah dengan plastik kedap udara"
-                ],
+                options: ["A. Direndam dalam air mendidih selama 5 menit", "B. Mengeringkan beberapa persen kadar air sebelum disimpan", "C. Membungkus setiap buah dengan plastik kedap udara"],
                 answer: 1,
                 explanation: "Pada buah jenis sitrus dilakukan persiapan sebelumnya, yaitu mengeringkan beberapa persen kadar air sebelum disimpan."
             },
             {
                 id: 65,
                 question: "Apa yang dimaksud dengan penyimpanan \"CA storage\" (controlled atmosphere storage) pada buah apel?",
-                options: [
-                    "A. Penyimpanan dengan mendinginkan di fasilitas pendingin serta mengurangi oksigen dan meningkatkan karbon dioksida",
-                    "B. Penyimpanan di dalam tanah terbuka tanpa pendingin",
-                    "C. Penyemprotan gas kimia beracun untuk mengawetkan kulit apel"
-                ],
+                options: ["A. Penyimpanan dengan mendinginkan di fasilitas pendingin serta mengurangi oksigen dan meningkatkan karbon dioksida", "B. Penyimpanan di dalam tanah terbuka tanpa pendingin", "C. Penyemprotan gas kimia beracun untuk mengawetkan kulit apel"],
                 answer: 0,
                 explanation: "Penyimpanan CA pada apel dilakukan dengan mendinginkan di fasilitas, mengurangi oksigen, dan meningkatkan karbon dioksida untuk penyimpanan lama."
+            }
+        ];
+
+        // Questions Data for Day 3 (70 HOTS Questions - Advanced Agricultural Practice)
+        const questionsDay3 = [
+            {
+                id: 1,
+                question: "Ketika mengoperasikan traktor roda empat di lahan miring, tindakan mana yang paling berisiko tinggi menyebabkan traktor terbalik ke belakang (rear rollover)?",
+                options: [
+                    "A. Menarik beban berat dengan posisi titik kait (hitch point) berada di atas poros roda belakang.",
+                    "B. Mengemudikan traktor turun miring secara perlahan dengan menggunakan gigi rendah.",
+                    "C. Memasang pemberat (ballast) tambahan pada bagian roda depan traktor."
+                ],
+                answer: 0,
+                explanation: "Menarik beban dengan titik kait di atas poros roda belakang menciptakan momen gaya putar balik yang mengangkat roda depan dan memicu terbalik ke belakang (rear rollover)."
+            },
+            {
+                id: 2,
+                question: "Seorang pekerja mengalami pusing, kulit kering tanpa keringat, serta suhu tubuh mencapai 40.5°C saat bekerja di greenhouse. Tindakan pertolongan pertama yang paling kritis dan benar adalah...",
+                options: [
+                    "A. Memberikan air gula hangat dalam jumlah banyak untuk mengembalikan energi dengan cepat.",
+                    "B. Mendinginkan tubuh korban secara agresif dengan air es/kain basah dan memanggil ambulans emergency.",
+                    "C. Memindahkan korban ke tempat teduh dan membiarkannya istirahat tidur terlentang hingga sadar."
+                ],
+                answer: 1,
+                explanation: "Gejala kulit kering tanpa keringat, suhu >40°C mengindikasikan Heatstroke (sengatan panas darurat). Pendinginan agresif adalah prosedur medis penyelamat nyawa."
+            },
+            {
+                id: 3,
+                question: "Mengapa pencampuran pestisida formulasi Organofosfat dengan bahan bersifat sangat alkalis (seperti kapur pertanian/basa kuat) harus dihindari?",
+                options: [
+                    "A. Menyebabkan larutan terdegradasi secara hidrolisis sehingga efisiensi racun hilang total.",
+                    "B. Mengakibatkan reaksi eksotermik memicu ledakan spontan pada wadah penyemprot.",
+                    "C. Meningkatkan konsentrasi toksisitas racun hingga 10 kali lipat bagi pengaplikasi."
+                ],
+                answer: 0,
+                explanation: "Senyawa organofosfat tidak stabil dalam suasana alkalis/basa tinggi dan mengalami hidrolisis alkalin yang merusak molekul racun."
+            },
+            {
+                id: 4,
+                question: "Saat menggunakan mesin pemotong rumput dorong (walk-behind mower) di area perbukitan miring, arah lintasan pemotongan yang paling aman untuk mencegah slip mesin adalah...",
+                options: [
+                    "A. Bergerak melintasi kontur kemiringan secara mendatar (menyamping).",
+                    "B. Bergerak naik dan turun tegak lurus mengikuti arah kemiringan lereng.",
+                    "C. Bergerak secara zig-zag dari bawah menuju ke puncak lereng."
+                ],
+                answer: 0,
+                explanation: "Memotong melintasi kontur (menyamping) menjaga posisi gravitasi mesin stabil dibanding bergerak naik-turun pada mesin dorong."
+            },
+            {
+                id: 5,
+                question: "Prosedur standar saat penyumbatan (clogging) terjadi pada pisau pemotong mesin harvester yang sedang beroperasi adalah...",
+                options: [
+                    "A. Mematikan mesin, mencabut kunci kontak, menunggu pisau berhenti total, baru membersihkan sumbatan.",
+                    "B. Memperlambat putaran mesin (idle) lalu mendorong sumbatan menggunakan tongkat kayu panjang.",
+                    "C. Menekan pedal kopling pemotong tanpa mematikan mesin utama lalu membersihkan pakai sarung tangan tebal."
+                ],
+                answer: 0,
+                explanation: "Prosedur keselamatan mutlak: Matikan mesin, cabut kunci kontak (Zero Energy State) sebelum menyentuh bagian pisau pemotong."
+            },
+            {
+                id: 6,
+                question: "Gejala awal keracunan pestisida golongan Karbamat pada pekerja yang membutuhkan penanganan khusus medis segera adalah...",
+                options: [
+                    "A. Pinpoint pupil (pupil mata mengecil drastis), salivasi berlebih, dan kram perut hebat.",
+                    "B. Kulit bersisik kering, peningkatan tekanan darah, dan rasa haus yang ekstrem.",
+                    "C. Hilang rasa peraba pada ujung jari tangan dan timbul ruam merah melingkar."
+                ],
+                answer: 0,
+                explanation: "Insektisida Karbamat/Organofosfat menghambat enzim asetilkolinesterase, memicu efek kolinergik: pupil mengecil (pinpoint), saliva berlebih, dan kram."
+            },
+            {
+                id: 7,
+                question: "Penggunaan APD respirator tipe cartridge filter untuk penyemprotan pestisida wajib diganti apabila...",
+                options: [
+                    "A. Pekerja mulai mencium bau uap bahan kimia atau merasa hambatan bernapas meningkat.",
+                    "B. Katup respirator telah digunakan lebih dari 3 jam berturut-turut di lapangan.",
+                    "C. Warna bagian luar bahan plastik respirator mulai terlihat memudar."
+                ],
+                answer: 0,
+                explanation: "Bau bahan kimia yang tercium menandakan media karbon aktif pada cartridge telah jenuh (breakthrough) dan wajib diganti baru."
+            },
+            {
+                id: 8,
+                question: "Bahaya utama dari gas tak berwarna dan tak berbau yang terakumulasi di dalam silo penyimpanan biji-bijian/pakan tertutup adalah...",
+                options: [
+                    "A. Keracunan Karbon Monoksida (CO) dan anoksia akibat akumulasi Karbon Dioksida (CO2) memindahkan Oksigen.",
+                    "B. Paparan gas Amonia tinggi yang langsung merusak jaringan saraf otak seketika.",
+                    "C. Ledakan gas Metana yang dipicu oleh kelembapan udara di dalam silo."
+                ],
+                answer: 0,
+                explanation: "Respirasi biji-bijian terkurung mengonsumsi O2 dan melepas CO2 berlebih serta CO berbahaya yang memicu anoksia seketika bagi pekerja."
+            },
+            {
+                id: 9,
+                question: "Ketika membawa beban berat material hasil panen secara manual, posisi tubuh untuk meminimalkan beban kompresi diskus lumbar (L5/S1) adalah...",
+                options: [
+                    "A. Membengkokkan lutut dengan Punggung tegak lurus dan beban berada rapat di depan dada.",
+                    "B. Membongkokkan pinggang dengan kaki lurus agar tumpuan berada pada kekuatan otot punggung.",
+                    "C. Mengangkat beban secara mendadak sambil memutar (twisting) badan ke arah tujuan."
+                ],
+                answer: 0,
+                explanation: "Menekuk lutut (power lift) memanfaatkan kekuatan otot paha (quadriceps) dan menjaga tulang belakang lurus mengurangi tekanan diskus lumbar."
+            },
+            {
+                id: 10,
+                question: "Aturan baku penanganan sisa wadah bekas pestisida cair yang aman bagi lingkungan adalah...",
+                options: [
+                    "A. Melakukan pembilasan triple-rinse (3 kali), memasukkan air bilasan ke tangki semprot, lalu merusak wadah.",
+                    "B. Membakar wadah plastik bekas di dalam area kebun agar sisa racun menguap terbakar habis.",
+                    "C. Mengubur wadah bekas secara langsung di dekat sumber air selokan panti pertanian."
+                ],
+                answer: 0,
+                explanation: "Prosedur Triple-Rinse memastikan sisa konsentrat terbuang ke tangki semprot, lalu wadah dilubangi agar tidak disalahgunakan."
+            },
+            {
+                id: 11,
+                question: "Batas kecepatan maksimum mengemudikan traktor pertanian tanpa kabin di jalan umum Jepang yang diizinkan undang-undang adalah...",
+                options: [
+                    "A. 15 km/jam",
+                    "B. 30 km/jam",
+                    "C. 45 km/jam"
+                ],
+                answer: 0,
+                explanation: "Menurut Undang-Undang Lalu Lintas Jepang, kendaraan khusus kecil pertanian tanpa kabin dibatasi maksimal 15 km/jam di jalan umum."
+            },
+            {
+                id: 12,
+                question: "Sebelum memutar traktor roda empat di ujung petak sawah basah, langkah mekanis wajib untuk mencegah kerusakan transmisi dan terbalik adalah...",
+                options: [
+                    "A. Melepas kunci diferensial (differential lock) dan menurunkan kecepatan mesin.",
+                    "B. Mengunci diferensial secara penuh dan menaikkan gas ke kecepatan maksimum.",
+                    "C. Mematikan sistem pengereman Roda Kiri dan Roda Kanan secara terpisah."
+                ],
+                answer: 0,
+                explanation: "Differential lock mengunci kedua roda berputar bersamaan. Jika dipakai berbelok, transmisi akan rusak dan traktor melintir terbalik."
+            },
+            {
+                id: 13,
+                question: "Pertolongan paling tepat jika pekerja secara tidak sengaja terkena cipratan konsentrat pestisida pada mata adalah...",
+                options: [
+                    "A. Membilas mata dengan air bersih mengalir secara terus menerus selama minimal 15 menit.",
+                    "B. Meneteskan obat tetes mata steril dan menutup mata menggunakan kain kasa rapat.",
+                    "C. Mengusap mata secara perlahan menggunakan kain kering hingga rasa perih hilang."
+                ],
+                answer: 0,
+                explanation: "Pertolongan pertama bahan kimia mata adalah pembilasan air mengalir kontinu minimal 15 menit untuk mengencerkan racun."
+            },
+            {
+                id: 14,
+                question: "Indikator utama kelelahan panas (Heat Exhaustion) yang membedakannya dengan Heatstroke fatal adalah...",
+                options: [
+                    "A. Keringat masih keluar deras dan fungsi kesadaran/mental korban masih normal.",
+                    "B. Kulit menjadi sangat panas kering dan hilangnya fungsi kesadaran total.",
+                    "C. Kegagalan fungsi organ dalam disertai henti napas seketika."
+                ],
+                answer: 0,
+                explanation: "Heat Exhaustion masih ditandai mekanisme keringat aktif dan sistem saraf sadar, berbeda dengan Heatstroke yang menghentikan keringat dan merusak kesadaran."
+            },
+            {
+                id: 15,
+                question: "Risiko terbesar bekerja di dalam greenhouse tertutup saat pengaplikasian fumigasi sulfur ( belerang ) adalah...",
+                options: [
+                    "A. Inhalasi gas Sulfur Dioksida (SO2) yang memicu edema paru-paru berat.",
+                    "B. Terjadinya penurunan kadar Kelembapan udara hingga 0% secara tiba-tiba.",
+                    "C. Peningkatan kadar Nitrogen di udara yang menyebabkan hipoksia instan."
+                ],
+                answer: 0,
+                explanation: "Belerang yang dibakar menghasilkan gas SO2 beracun yang jika terhirup bereaksi dengan air di paru-paru membentuk asam sulfit memicu edema paru."
+            },
+            {
+                id: 16,
+                question: "Pembukaan dan penutupan stomata pada daun tanaman dikendalikan secara utama oleh...",
+                options: [
+                    "A. Perubahan tekanan turgor pada sel penjaga (guard cells) yang dipengaruhi akumulasi ion Kalium (K+).",
+                    "B. Peningkatan konsentrasi gas Oksigen di dalam jaringan mesofil daun secara langsung.",
+                    "C. Pergerakan zat gula hasil fotosintesis dari akar menuju ke pembuluh floem daun."
+                ],
+                answer: 0,
+                explanation: "Akumulasi ion K+ ke sel penjaga menurunkan potensial air, menarik air masuk secara osmosis, meningkatkan turgor sel hingga stomata membuka."
+            },
+            {
+                id: 17,
+                question: "Gejala klorosis (penuningan) pada daun-daun TUA tanaman terlebih dahulu mengindikasikan defisiensi unsur hara bersifat mobile, yaitu...",
+                options: [
+                    "A. Nitrogen (N) atau Magnesium (Mg).",
+                    "B. Kalsium (Ca) atau Besi (Fe).",
+                    "C. Boron (B) atau Tembaga (Cu)."
+                ],
+                answer: 0,
+                explanation: "Unsur N dan Mg bersifat mobile di dalam jaringan tanaman; saat defisiensi, hara ditranslokasikan dari daun tua menuju ke daun muda."
+            },
+            {
+                id: 18,
+                question: "Nilai Kapasitas Tukar Kation (KTK / CEC) tanah yang tinggi menunjukkan bahwa tanah tersebut...",
+                options: [
+                    "A. Memiliki kemampuan tinggi mengikat dan menyediakan kation nutrisi (K+, Ca2+, Mg2+) dari pencucian.",
+                    "B. Sangat mudah mengalami erosi air dan tidak mampu menahan kelembapan tanah.",
+                    "C. Memiliki tingkat keasaman (pH) ekstrem di bawah nilai 4.0."
+                ],
+                answer: 0,
+                explanation: "KTK/CEC mengukur muatan negatif tanah yang mampu mengikat kation nutrisi positif sehingga tidak mudah tercuci oleh air hujan."
+            },
+            {
+                id: 19,
+                question: "Dampak pemberian pupuk Nitrogen berlebihan pada tanaman hortikultura buah adalah...",
+                options: [
+                    "A. Pertumbuhan vegetatif terlalu sukulen (lunak), tanaman rentan rebah, dan pembentukan buah terhambat.",
+                    "B. Tanaman menjadi kerdil dengan sistem perakaran yang sangat tebal dan keras.",
+                    "C. Buah matang lebih cepat namun memiliki kadar gula (Brix) yang sangat tinggi."
+                ],
+                answer: 0,
+                explanation: "Nitrogen berlebih merangsang pembelahan sel Dinding tipis (sukulen) dan vegetatif berlebih, menekan fase generatif pembuahan."
+            },
+            {
+                id: 20,
+                question: "Pada kondisi pH tanah sangat masam (pH < 4.5), ketersediaan unsur hara yang menjadi toksik/racun bagi pertumbuhan akar tanaman adalah...",
+                options: [
+                    "A. Aluminium (Al) dan Mangan (Mn).",
+                    "B. Nitrat (NO3-) dan Fosfat (PO4 3-).",
+                    "C. Kalsium (Ca) dan Kalium (K)."
+                ],
+                answer: 0,
+                explanation: "Pada pH < 4.5, elemen Aluminium (Al) dan Mangan (Mn) terlarut dalam konsentrasi tinggi yang merusak ujung sel perakaran."
+            },
+            {
+                id: 21,
+                question: "Proses konversi senyawa Amonium (NH4+) menjadi Nitrat (NO3-) oleh bakteri Nitrosomonas dan Nitrobacter di dalam tanah disebut...",
+                options: [
+                    "A. Nitrifikasi.",
+                    "B. Denitrifikasi.",
+                    "C. Amonifikasi."
+                ],
+                answer: 0,
+                explanation: "Nitrifikasi adalah proses oksidasi biologis Amonium menjadi Nitrit (oleh Nitrosomonas) lalu menjadi Nitrat (oleh Nitrobacter)."
+            },
+            {
+                id: 22,
+                question: "Penyakit \"Blossom End Rot\" (busuk ujung buah) pada tanaman tomat disebabkan oleh kerentanan fisiologis akibat...",
+                options: [
+                    "A. Defisiensi transmisi hara Kalsium (Ca) ke jaringan buah akibat fluktuasi pasokan air.",
+                    "B. Serangan cendawan Phytophthora infestans pada masa pembentukan bunga.",
+                    "C. Toksisitas racun klorin dari air irigasi yang terlalu berlebihan."
+                ],
+                answer: 0,
+                explanation: "Kalsium diperlukan untuk struktur dinding sel buah (kalsium pektat). Transpirasi rendah atau air tidak stabil menghambat translokasi Ca ke ujung buah."
+            },
+            {
+                id: 23,
+                question: "Jalur pengangkutan air dan hara mineral terlarut dari tanah menuju ke daun melalui jaringan pembuluh kayu dinamakan...",
+                options: [
+                    "A. Xilem.",
+                    "B. Floem.",
+                    "C. Kambium."
+                ],
+                answer: 0,
+                explanation: "Pembuluh Xilem bertugas mengangkut air dan hara mineral dari akar ke atas, sedangkan Floem mengangkut hasil fotosintesis."
+            },
+            {
+                id: 24,
+                question: "Fenomena di mana ujung batang tanaman tumbuh melengkung membengkok ke arah sumber cahaya matahari disebut...",
+                options: [
+                    "A. Fototropisme positif, akibat migrasi hormon Auksin ke sisi yang teduh/gelap.",
+                    "B. Fotoperiodisme negatif, akibat kerusakan hormon Sitokinin terkena radiasi UV.",
+                    "C. Geotropisme negatif, akibat akumulasi hormon Asam Absisat di pucuk."
+                ],
+                answer: 0,
+                explanation: "Cahaya merusak/mendorong Auksin berpindah ke Sisi teduh. Sisi teduh tumbuh lebih cepat sehingga batang membengkok ke arah cahaya."
+            },
+            {
+                id: 25,
+                question: "Hubungan simbiotik mutualisme antara akar tanaman keluarga Leguminosae dengan bakteri Rhizobium menghasilkan keunggulan...",
+                options: [
+                    "A. Fiksasi gas Nitrogen (N2) bebas dari udara menjadi bentuk asam amino yang siap diserap tanaman.",
+                    "B. Pelarutan ikatan unsur Fosfat terikat di dalam tanah menjadi bentuk terlarut.",
+                    "C. Peningkatan daya tahan jaringan batang terhadap infeksi virus mosaik."
+                ],
+                answer: 0,
+                explanation: "Enzim nitrogenase pada Bakteri Rhizobium mengubah gas N2 atmosferik menjadi bentuk amonia/asam amino bagi host tanaman Legum."
+            },
+            {
+                id: 26,
+                question: "Kadar air tanah saat air tidak lagi mampu ditahan oleh gaya kapiler tanah dan lolos akibat gaya gravitasi bumi dinamakan...",
+                options: [
+                    "A. Kapasitas Lapang (Field Capacity).",
+                    "B. Titik Layu Permanen (Permanent Wilting Point).",
+                    "C. Kejenuhan Air Total (Total Saturation)."
+                ],
+                answer: 0,
+                explanation: "Kapasitas Lapang adalah kondisi kadar air tanah setelah air gravitasi (gravitational water) selesai turun habis."
+            },
+            {
+                id: 27,
+                question: "Peran utama hormon Etilen pada tanaman hortikultura adalah...",
+                options: [
+                    "A. Memicu proses pematangan buah klimakterik dan pembentukan zona absisi (pencucian/gugur daun).",
+                    "B. Merangsang pembelahan sel jaringan meristem dan pemanjangan ruas batang.",
+                    "C. Menghambat penuaan daun dan menjaga kesegaran sel fotosintesis."
+                ],
+                answer: 0,
+                explanation: "Etilen adalah hormon gas yang memicu klimakterik pematangan buah dan merangsang Enzim selulase memutus tangkai (absisi)."
+            },
+            {
+                id: 28,
+                question: "Struktur tanah tipe \"Granular\" sangat disukai dalam budidaya sayuran karena...",
+                options: [
+                    "A. Memiliki keseimbangan pori makro dan mikro yang optimal untuk aerasi serta retensi air.",
+                    "B. Membentuk lapisan keras kedap air sehingga mencegah pencucian pupuk ke bawah.",
+                    "C. Seluruh agregat tanah terisi penuh oleh lempung tanpa adanya ruang udara."
+                ],
+                answer: 0,
+                explanation: "Struktur granular memiliki porositas seimbang yang menyediakan ruang pernapasan akar (aerasi) sekaligus menahan air kapiler."
+            },
+            {
+                id: 29,
+                question: "Gejala defisiensi unsur hara Kalsium (Ca) atau Boron (B) selalu muncul pertama kali pada...",
+                options: [
+                    "A. Pucuk daun muda dan titik tumbuh terminal, karena unsur tersebut bersifat immobile.",
+                    "B. Daun-daun bagian bawah yang paling tua, karena hara ditranslokasikan ke atas.",
+                    "C. Batang bagian tengah, berupa keretakan pembuluh kulit kayu luar."
+                ],
+                answer: 0,
+                explanation: "Kalsium dan Boron bersifat immobile (tidak dapat berpindah), sehingga gejala kekurangan selalu muncul pada jaringan muda/pucut atas."
+            },
+            {
+                id: 30,
+                question: "Fungsi utama aplikasi pengapuran (aplikasi Dolomit/Kapur Pertanian) pada tanah masam adalah...",
+                options: [
+                    "A. Menaikkan pH tanah serta menyuplai unsur Kalsium (Ca) dan Magnesium (Mg).",
+                    "B. Menurunkan pH tanah yang terlalu basa agar menjadi netral.",
+                    "C. Membunuh seluruh populasi cacing tanah dan mikroba tanah pengurai."
+                ],
+                answer: 0,
+                explanation: "Senyawa CaCO3 / MgCO3 mengikat ion H+ bebas di dalam tanah sehingga pH naik dan menyuplai Kalsium/Magnesium."
+            },
+            {
+                id: 31,
+                question: "Tanaman \"Hari Pendek\" (Short-day plants) seperti Strawberry akan terdorong memasuki fase pembungaan apabila...",
+                options: [
+                    "A. Panjang masa gelap (malam hari) melebihi durasi panjang kritis tertentu.",
+                    "B. Penerimaan durasi penyinaran matahari siang hari lebih dari 16 jam nonstop.",
+                    "C. Suhu lingkungan siang hari dipertahankan di atas nilai 35°C."
+                ],
+                answer: 0,
+                explanation: "Pembungaan tanaman hari pendek sebenarnya dikontrol oleh durasi periode malam/gelap yang panjang tanpa terputus (critical dark period)."
+            },
+            {
+                id: 32,
+                question: "Respirasi pemeliharaan (maintenance respiration) pada jaringan tanaman akan meningkat tajam apabila...",
+                options: [
+                    "A. Suhu lingkungan meningkat drastis di atas batas optimum.",
+                    "B. Konsentrasi CO2 di dalam greenhouse diturunkan hingga nol.",
+                    "C. Kelembapan relatif udara dinaikkan mencapai 100%."
+                ],
+                answer: 0,
+                explanation: "Peningkatan suhu mempercepat aktivitas enzim respirasi, meningkatkan pembakaran karbohidrat hasil fotosintesis untuk pemeliharaan sel."
+            },
+            {
+                id: 33,
+                question: "Bahan organik tanah yang telah terdegradasi sempurna hingga stabil, berwarna cokelat gelap, dan berkapasitas tukar kation tinggi disebut...",
+                options: [
+                    "A. Humus.",
+                    "B. Peat (Gambut mentah).",
+                    "C. Compost kasal."
+                ],
+                answer: 0,
+                explanation: "Humus adalah bentuk akhir dekomposisi bahan organik yang bersifat resisten, koloidal, dan berkapasitas simpan hara sangat tinggi."
+            },
+            {
+                id: 34,
+                question: "Penyerapan air oleh sel-sel akar dari larutan tanah terjadi melalui mekanisme...",
+                options: [
+                    "A. Osmosis, bergerak dari potensial air tinggi (larutan encer) ke potensial air rendah (sel akar).",
+                    "B. Difusi terfasilitasi, bergerak memompa air melawan gradien konsentrasi menggunakan ATP.",
+                    "C. Turgor aktif, di mana sel akar menyedot air menggunakan tekanan mekanis jaringan."
+                ],
+                answer: 0,
+                explanation: "Air berpindah secara pasif melalui membran semipermeabel dari larutan tanah encer menuju ke dalam sel akar yang lebih pekat."
+            },
+            {
+                id: 35,
+                question: "Pengaruh kondisi tanah yang tergenang air (waterlogging) dalam waktu lama terhadap perakaran tanaman adalah...",
+                options: [
+                    "A. Terjadinya kondisi anoksia (bebas O2) yang memicu kematian sel akar dan pembusukan oleh bakteri anaerob.",
+                    "B. Peningkatan penyerapan hara hara makro hingga 2 kali lipat akibat pelarutan air.",
+                    "C. Percepatan pembentukan bintil akar fiksasi nitrogen pada tanaman hortikultura."
+                ],
+                answer: 0,
+                explanation: "Air menggeser O2 dari pori tanah, menyebabkan akar mengalami respirasi anaerob yang menghasilkan racun etanol dan pembusukan."
+            },
+            {
+                id: 36,
+                question: "Metode Pengendalian Hama Terpadu (PHT / IPM) memprioritaskan tindakan...",
+                options: [
+                    "A. Kombinasi pencegahan kultural, biologis, dan mekanis; kimia hanya sebagai pilihan terakhir jika melebihi ambang ekonomi.",
+                    "B. Penyemprotan pestisida kimia secara teratur berdasarkan jadwal kalender rutin mingguan.",
+                    "C. Eradikasikan seluruh populasi serangga yang ada di lahan tanpa sisa."
+                ],
+                answer: 0,
+                explanation: "PHT/IPM mengintegrasikan seluruh teknik pencegahan; pestisida sintetik hanya digunakan jika populasi hama melewati ambang ekonomi (EIL)."
+            },
+            {
+                id: 37,
+                question: "Gejala serangan hama Kutu Daun (Aphids) yang paling khas dan memicu munculnya penyakit sekunder adalah...",
+                options: [
+                    "A. Mengeluarkan embun madu (honeydew) yang memicu timbulnya jamur Jelutung (Sooty mold).",
+                    "B. Membuat lubang gerogokan besar bertepi rata pada lembaran daun tua.",
+                    "C. Memotong pangkal batang bibit muda hingga terkulai roboh di permukaan tanah."
+                ],
+                answer: 0,
+                explanation: "Aphids mengisap cairan sel dan mengekskresikan embun madu manis yang menjadi media tumbuh jamur jelutung hitam di atas daun."
+            },
+            {
+                id: 38,
+                question: "Perbedaan dasar antara fungisida sistemik dan fungisida kontak adalah...",
+                options: [
+                    "A. Fungisida sistemik diserap dan didistribusikan ke dalam jaringan tanaman, sedangkan kontak hanya melindungi permukaan.",
+                    "B. Fungisida kontak membunuh spora di dalam jaringan sel, sedangkan sistemik hanya mencuci permukaan luar.",
+                    "C. Fungisida kontak dapat bertahan hingga 3 bulan di dalam pembuluh xilem tanaman."
+                ],
+                answer: 0,
+                explanation: "Fungisida sistemik masuk translokasi ke jaringan tanaman membunuh cendawan di dalam, kontak hanya melapisi permukaan luar."
+            },
+            {
+                id: 39,
+                question: "Teknik Grafting (penyambungan) pada budidaya sayuran Solanaceae (seperti Terung atau Tomat) bertujuan utama untuk...",
+                options: [
+                    "A. Menggabungkan batang atas bernilai ekonomi tinggi dengan batang bawah (rootstock) yang tahan penyakit tular tanah (soil-borne).",
+                    "B. Mempercepat masa panen menjadi separuh dari durasi normal tanaman biji.",
+                    "C. Mengurangi kebutuhan air irigasi hingga 90% selama masa pembentukan buah."
+                ],
+                answer: 0,
+                explanation: "Grafting menggunakan rootstock tahan patogen tanah (seperti Fusarium/Bakteri Layu) menggabungkan dengan varietas buah unggul."
+            },
+            {
+                id: 40,
+                question: "Penyakit \"Damping-off\" (rebah semai) pada pembibitan sayuran umumnya disebabkan oleh cendawan tular tanah dari genus...",
+                options: [
+                    "A. Pythium spp. atau Rhizoctonia solani.",
+                    "B. Botrytis cinerea.",
+                    "C. Colletotrichum gloeosporioides."
+                ],
+                answer: 0,
+                explanation: "Cendawan Pythium spp. menginfeksi pangkal batang bibit muda di kondisi media basah hingga jaringan membusuk dan roboh."
+            },
+            {
+                id: 41,
+                question: "Prinsip Rotasi Tanaman (Crop Rotation) yang efektif untuk memutus siklus hidup hama dan penyakit adalah...",
+                options: [
+                    "A. Menggilir penanaman antar famili tanaman yang berbeda (misal: Solanaceae diganti Gramineae/Leguminosae).",
+                    "B. Menanam varietas tomat yang berbeda warna secara bergantian pada petak yang sama.",
+                    "C. Menanam tanaman dari famili yang sama secara terus menerus sepanjang tahun."
+                ],
+                answer: 0,
+                explanation: "Patogen/hama spesifik famili akan mati jika lahan ditanami famili tanaman non-inang pada musim berikutnya."
+            },
+            {
+                id: 42,
+                question: "Keuntungan penggunaan mulsa plastik hitam-perak (Plastic Mulch) pada budidaya tanaman hortikultura adalah...",
+                options: [
+                    "A. Memantulkan sinar UV (sisi perak) untuk menolak hama serangga dan menekan gulma (sisi hitam).",
+                    "B. Meningkatkan penguapan air tanah agar tanah cepat menjadi kering.",
+                    "C. Menyerap seluruh pupuk berlebih agar tidak tercuci oleh air hujan."
+                ],
+                answer: 0,
+                explanation: "Warna perak memantulkan sinar UV yang mengacaukan navigasi serangga pengisap, warna hitam memblokir sinar matahari penumbuh gulma."
+            },
+            {
+                id: 43,
+                question: "Untuk mencegah timbulnya resistensi hama terhadap insektisida, tindakan manajemen yang wajib dilakukan adalah...",
+                options: [
+                    "A. Melakukan rotasi penggunaan insektisida dengan Golongan Cara Kerja (Mode of Action / IRAC) yang berbeda.",
+                    "B. Menaikkan dosis takaran insektisida hingga 2 kali lipat setiap kali melakukan penyemprotan.",
+                    "C. Menggunakan racun dari merek dagang berbeda meskipun bahan aktifnya persis sama."
+                ],
+                answer: 0,
+                explanation: "Rotasi kode cara kerja (MoA IRAC) mencegah seleksi individu hama yang memiliki gen resisten terhadap satu mekanisme racun."
+            },
+            {
+                id: 44,
+                question: "Gejala serangan Tungau Merah (Spider Mites) pada bagian bawah daun tanaman ditandai dengan...",
+                options: [
+                    "A. Bercak bintik-bintik kuning/perak (stippling) dan benang jaring halus di balik daun.",
+                    "B. Daun melengkung keriting membengkak tebal berlendir bening.",
+                    "C. Adanya bentol-bentol gal (bintil) membengkak pada tulang daun utama."
+                ],
+                answer: 0,
+                explanation: "Tungau merusak sel epidermis daun menghasilkan bintik perak/kuning dan membentuk jaring pelindung di balik daun."
+            },
+            {
+                id: 45,
+                question: "Pengontrolan kelembapan relatif (RH) di dalam greenhouse diatur berada di bawah 80% bertujuan utama mencegah perkembangan penyakit...",
+                options: [
+                    "A. Kapang Kelabu (Gray Mold / Botrytis cinerea).",
+                    "B. Layu Bakteri (Ralstonia solanacearum).",
+                    "C. Virus Keriting Kuning (TYLCV)."
+                ],
+                answer: 0,
+                explanation: "Spora Botrytis cinerea membutuhkan film air dan kelembapan RH >85% untuk perkecambahan spora di permukaan jaringan."
+            },
+            {
+                id: 46,
+                question: "Serangga parasitoid yang biasa dimanfaatkan sebagai agen pengendali hayati untuk mengontrol hama Lalat Putih (Whitefly / Bemisia tabaci) adalah...",
+                options: [
+                    "A. Encarsia formosa.",
+                    "B. Harmonia axyridis.",
+                    "C. Phytoseiulus persimilis."
+                ],
+                answer: 0,
+                explanation: "Encarsia formosa adalah tawon parasitoid kecil yang bertelur di dalam nimfa lalat putih (Whitefly)."
+            },
+            {
+                id: 47,
+                question: "Istilah \"Waktu Tunggu Panen\" (Pre-Harvest Interval / PHI) pada label kemasan pestisida mengindikasikan...",
+                options: [
+                    "A. Jarak waktu minimal (hari) antara aplikasi terakhir pestisida dengan saat hasil tanaman boleh dipanen aman dikonsumsi.",
+                    "B. Durasi waktu yang dibutuhkan obat pestisida untuk mengering sempurna di atas permukaan daun.",
+                    "C. Masa kedaluwarsa formulasi racun pestisida di dalam botol penyimpanan."
+                ],
+                answer: 0,
+                explanation: "PHI adalah durasi waktu wajib agar residu bahan aktif pestisida terdegradasi turun di bawah batas aman residu (BMR)."
+            },
+            {
+                id: 48,
+                question: "Penyakit Layu Fusarium (Fusarium oxysporum) menyerang tanaman melalui jalur...",
+                options: [
+                    "A. Luka jaringan perakaran lalu menyumbat pembuluh Xilem sehingga tanaman layu permanen.",
+                    "B. Spora melayang udara yang menginfeksi stomata daun bagian atas.",
+                    "C. Gigitan vektor serangga thrips pada pucuk bunga."
+                ],
+                answer: 0,
+                explanation: "Fusarium oxysporum menginfeksi luka akar, masuk menembus dan berkembang biak di pembuluh Xilem hingga pasokan air tersumbat total."
+            },
+            {
+                id: 49,
+                question: "Tindakan \"Vernalisasi\" pada budidaya tanaman sayuran tertentu (seperti Bawang Putih atau Lobak) merujuk pada...",
+                options: [
+                    "A. Induksi pembungaan atau pembentukan umbi melalui pemaparan suhu dingin periode tertentu.",
+                    "B. Pemotongan akar tunggang bibit sebelum dipindahkan ke lahan permanen.",
+                    "C. Perendaman biji dalam larutan asam pekat untuk memecah dormansi kulit."
+                ],
+                answer: 0,
+                explanation: "Vernalisasi adalah pemaparan suhu dingin alami/buatan yang memicu meristem tanaman mengubah fase dari vegetatif ke generatif."
+            },
+            {
+                id: 50,
+                question: "Sistem Irigasi Tetes (Drip Irrigation) paling unggul dibandingkan irigasi curah (sprinkler) karena...",
+                options: [
+                    "A. Efisiensi penggunaan air tinggi, langsung ke zona perakaran, dan daun tetap kering mengurangi risiko jamur.",
+                    "B. Biaya instalasi awal yang sangat murah tanpa memerlukan penyaringan air.",
+                    "C. Mampu menyiram seluruh permukaan gulma di antara bedengan hingga basah."
+                ],
+                answer: 0,
+                explanation: "Drip irrigation mengaplikasikan air langsung ke zona akar, meminimalkan penguapan dan menjaga tajuk daun tetap kering dari infeksi jamur."
+            },
+            {
+                id: 51,
+                question: "Gejala \"Kuning Keriting\" pada tanaman cabai/tomat biasanya disebabkan oleh Virus yang ditularkan oleh vektor...",
+                options: [
+                    "A. Kutu Kebul (Bemisia tabaci).",
+                    "B. Ulat Grayak (Spodoptera litura).",
+                    "C. Kumbang Helm (Coccinellidae)."
+                ],
+                answer: 0,
+                explanation: "Kutu Kebul (Bemisia tabaci) adalah serangga vektor utama penular begomovirus (virus kuning keriting)."
+            },
+            {
+                id: 52,
+                question: "Teknik \"Hardening-off\" pada bibit sebelum dipindahkan dari nursery ke lahan terbuka dilakukan dengan cara...",
+                options: [
+                    "A. Mengurangi penyiraman air dan memaparkan bibit ke sinar matahari penuh serta angin secara bertahap.",
+                    "B. Memberikan pupuk Nitrogen dosis tinggi agar batang membengkak cepat.",
+                    "C. Merendam seluruh pot bibit di dalam wadah berisi larutan hormon auksin."
+                ],
+                answer: 0,
+                explanation: "Hardening-off menebalkan lapisan kutikula daun dan memperkuat stomata agar bibit tidak kaget saat pindah tanam."
+            },
+            {
+                id: 53,
+                question: "Gulma berdaun lebar (broadleaf weeds) secara morfologi dicirikan oleh...",
+                options: [
+                    "A. Tulang daun menyipit sejajar dan memiliki titik tumbuh tersembunyi di pangkal.",
+                    "B. Tulang daun menyirip/menjari, memiliki percabangan batang, dan berkeping dua (dikotil).",
+                    "C. Batang berbentuk segitiga berongga tanpa adanya buku-buku."
+                ],
+                answer: 1,
+                explanation: "Ciri dikotil/daun lebar: Pertulangan daun menyirip/menjari, memiliki kambium percabangan, dan dua keping biji."
+            },
+            {
+                id: 54,
+                question: "Hambatan utama pengaplikasian Herbisida Kontak Non-selektif (seperti bahan aktif Parakuat) adalah...",
+                options: [
+                    "A. Hanya membunuh bagian jaringan hijau yang terkena semprotan, tidak mematikan organ gulma bawah tanah (rimpang).",
+                    "B. Membutuhkan waktu hingga 3 minggu untuk melihat efek kematian gulma.",
+                    "C. Terdistribusi masuk ke dalam jaringan pembuluh tanaman budidaya lewat akar."
+                ],
+                answer: 0,
+                explanation: "Herbisida kontak non-sistemik hanya merusak jaringan terendam semprotan; gulma perenial berpucuk dalam akan tumbuh kembali dari rimpang."
+            },
+            {
+                id: 55,
+                question: "Fungsi utama dari kegiatan \"Penyiangan / Hilling-up\" (pembumbunan tanah) pada tanaman kentang adalah...",
+                options: [
+                    "A. Menutup umbi berkembang agar tidak terkena sinar matahari yang memicu pembentukan racun Solanin hijau.",
+                    "B. Menghentikan pertumbuhan pembentukan bunga secara total.",
+                    "C. Mematahkan batang utama agar nutrisi mengalir ke perakaran."
+                ],
+                answer: 0,
+                explanation: "Umbi kentang yang terpapar sinar matahari akan membentuk klorofil disertai racun glikoalkaloid (Solanin) yang berbahaya."
+            },
+            {
+                id: 56,
+                question: "Pengayakan pakan atau penyaringan larutan nutrisi Hidroponik (NFT/DFT) dilakukan untuk menjaga nilai EC (Electrical Conductivity) yaitu indikator...",
+                options: [
+                    "A. Total konsentrasi garam-garam mineral nutrisi terlarut di dalam air.",
+                    "B. Tingkat keasaman dan kebasaan larutan air irigasi.",
+                    "C. Kadar Oksigen terlarut (Dissolved Oxygen) di dalam bak penampungan."
+                ],
+                answer: 0,
+                explanation: "EC (Electrical Conductivity) mengukur kemampuan daya hantar listrik yang berbanding lurus dengan jumlah ion garam pupuk terlarut."
+            },
+            {
+                id: 57,
+                question: "Ciri-ciri pemanenan buah Melon yang sudah mencapai kematangan optimum siap panen secara fisik ditandai oleh...",
+                options: [
+                    "A. Pembentukan lapisan jaring (net) rapat timbul mendatar dan pembentukan cincin absisi (retakan) pada tangkai buah.",
+                    "B. Kulit buah berwarna hijau gelap mengilap dan tangkai menyatu sangat keras kaku.",
+                    "C. Buah terasa sangat lembek saat ditekan jari tangan."
+                ],
+                answer: 0,
+                explanation: "Kematangan melon klimakterik ditandai terbentuknya jaring net menonjol tebal dan retakan tangkai (abscission layer)."
+            },
+            {
+                id: 58,
+                question: "Kerusakan pascapanen akibat \"Chilling Injury\" pada komoditas buah tropis terjadi jika disimpan pada...",
+                options: [
+                    "A. Suhu dingin di atas titik beku (misal: 0°C – 8°C) yang berada di bawah suhu ambang toleransi dingin komoditas.",
+                    "B. Suhu ruangan panas di atas 35°C disertai kelembapan tinggi.",
+                    "C. Kondisi pembekuan ekstrem di bawah -18°C secara mendadak."
+                ],
+                answer: 0,
+                explanation: "Chilling injury adalah kerusakan metabolisme sel akibat penyimpanan suhu dingin yang masih di atas titik beku komoditas tropis."
+            },
+            {
+                id: 59,
+                question: "Penggunaan perangkap Pheromone Sintetis efektif digunakan dalam Manajemen Hama untuk...",
+                options: [
+                    "A. Menarik dan memerangkap serangga jantan dewasa (seperti ngengat penggerek) guna monitoring dan mengacaukan perkawinan.",
+                    "B. Membunuh seluruh telur dan larva hama di permukaan daun secara langsung.",
+                    "C. Mengusir serangga vektor keluar dari area lahan pertanian."
+                ],
+                answer: 0,
+                explanation: "Pheromone sintetis meniru hormon pemikat betina untuk memikat serangga jantan masuk perangkap guna monitoring populasi."
+            },
+            {
+                id: 60,
+                question: "Bakteri biocontrol Bacillus thuringiensis (Bt) bekerja membunuh larva ulat penggerek melalui mekanisme...",
+                options: [
+                    "A. Protein kristal endotoksin merusak dinding saluran pencernaan (usus tengah) serangga setelah tertelan.",
+                    "B. Menutup saluran pernapasan (spirakel) serangga dari luar tubuh.",
+                    "C. Menginfeksi jaringan saraf pusat sehingga serangga mengalami kelumpuhan instan."
+                ],
+                answer: 0,
+                explanation: "Kristal protein Bt terlarut dalam pH basa usus serangga, mengikat reseptor sel usus hingga bocor dan serangga mati kelaparan."
+            },
+            {
+                id: 61,
+                question: "[Kasus Operasional] Anda mengukur nilai pH larutan nutrisi hidroponik sebesar 4.2 dan nilai EC sebesar 3.5 mS/cm untuk tanaman Tomat fase pembentukan buah. Keputusan koreksi teknis yang paling tepat adalah...",
+                options: [
+                    "A. Menambahkan basa (KOH/K2CO3) untuk menaikkan pH ke rentang 5.5–6.5 dan mengencerkan larutan dengan air bersih untuk menurunkan EC.",
+                    "B. Menambahkan Asam Nitrat (HNO3) agar pH semakin turun dan menambahkan pekatan pupuk stok A&B.",
+                    "C. Membiarkan kondisi tersebut karena tomat menyukai kondisi larutan yang sangat asam dan pekat."
+                ],
+                answer: 0,
+                explanation: "pH optimum tomat adalah 5.5–6.5. pH 4.2 terlalu asam (butuh penambahan KOH), dan EC 3.5 terlalu pekat (butuh pengenceran air)."
+            },
+            {
+                id: 62,
+                question: "[Kasus Hama] Di dalam greenhouse terisolasi, ditemukan populasi Thrips sangat tinggi dan mulai terlihat gejala virus kriting. Langkah penanganan eradikasi darurat PHT yang paling efektif adalah...",
+                options: [
+                    "A. Memasang perangkap lengket berwarna biru (blue sticky trap), memasang kain kassa (insect screen) mesh tebal, dan mengaplikasikan insektisida sistemik sesuai ambang.",
+                    "B. Menyiram lantai greenhouse dengan air sabun deterjen pekat setiap pagi hari.",
+                    "C. Membuka seluruh dinding plastik greenhouse agar angin kencang menerbangkan serangga keluar."
+                ],
+                answer: 0,
+                explanation: "PHT Greenhouse: Perangkap lengket biru spesifik Thrips + Kassa serangga mencegah masuk + Insektisida sistemik rotasi."
+            },
+            {
+                id: 63,
+                question: "[Kasus Tanah] Hasil uji laboratorium menunjukkan tanah lahan memiliki tekstur Lempung Liat Berdebu dengan drainase buruk dan terjadi akumulasi garam (salinitas tinggi). Tindakan perbaikan struktur lahan jangka panjang adalah...",
+                options: [
+                    "A. Pembuatan saluran drainase dalam (sub-surface drain), penggenangan air (leaching) untuk mencuci garam, dan aplikasi bahan organik/gypsum.",
+                    "B. Memadatkan permukaan tanah menggunakan mesin stumper/wacker.",
+                    "C. Memberikan pupuk kimia sintetis bergaram tinggi secara terus menerus."
+                ],
+                answer: 0,
+                explanation: "Pencucian garam (leaching) membutuhkan drainase bawah tanah yang baik, serta Gypsum (CaSO4) untuk menggantikan ion Natrium terikat."
+            },
+            {
+                id: 64,
+                question: "[Kasus Cuaca] Prakiraan cuaca menunjukkan akan terjadi penurunan suhu ekstrem di bawah 0°C (Frost/Pembekuan) malam nanti pada kebun Apel yang sedang berbunga. Teknik perlindungan fisik yang benar adalah...",
+                options: [
+                    "A. Mengoperasikan kipas angin sirkulasi atas (frost fans) atau penyiraman sprinkler overhead untuk memanfaatkan panas laten pembekuan.",
+                    "B. Menutupi seluruh pohon apel menggunakan plastik mulsa hitam rapat tanpa celah.",
+                    "C. Memotong seluruh cabang bunga agar tidak rusak terkena es."
+                ],
+                answer: 0,
+                explanation: "Sprinkler overhead melepas panas laten pembekuan (334 J/g) saat air membeku, menjaga suhu jaringan tanaman tetap berada di 0°C."
+            },
+            {
+                id: 65,
+                question: "[Kasus Keselamatan] Saat pengaplikasian pestisida di lahan terbuka, arah angin tiba-tiba berubah menuju ke arah berdiri operator penyemprot. Tindakan keselamatan standar adalah...",
+                options: [
+                    "A. Segera menghentikan penyemprotan dan berpindah posisi berdiri searah angin (membelakangi arah angin menyemprot).",
+                    "B. Mempercepat laju jalan sambil terus menyemprot menentang arah angin.",
+                    "C. Mengarahkan nozel penyemprot ke atas udara agar uap terbawa angin."
+                ],
+                answer: 0,
+                explanation: "Operator wajib menyemprot searah angin (membelakangi angin) agar uap racun terdorong menjauhi tubuh dan jalur jalan."
+            },
+            {
+                id: 66,
+                question: "[Kasus Pascapanen] Komoditas sayuran daun (seperti Bayam/Komatsuna) mengalami kelayuan sangat cepat setelah dipanen pada siang hari terik. Metode penanganan awal \"Pre-cooling\" yang tepat adalah...",
+                options: [
+                    "A. Vacuum Cooling atau Hydro-cooling menggunakan air es bersih untuk menurunkan suhu lapangan (field heat) secara cepat.",
+                    "B. Menjemur hasil panen di bawah terik matahari agar kadar air menguap.",
+                    "C. Memasukkan langsung produk basah hangat ke dalam kardus tertutup rapat."
+                ],
+                answer: 0,
+                explanation: "Vacuum cooling / Hydro-cooling dengan air es menurunkan suhu lapangan secara instan untuk menekan laju respirasi dan pembusukan."
+            },
+            {
+                id: 67,
+                question: "[Kasus Pembibitan] Pembibitan semangka menggunakan tray persemaian mengalami pertumbuhan batang yang sangat panjang, kurus, pucat, dan mudah roboh (Etiolasi). Penyebab utama kondisi ini adalah...",
+                options: [
+                    "A. Kekurangan intensitas cahaya matahari (intensitas naungan terlalu gelap) dan kelebihan air/nitrogen.",
+                    "B. Kelebihan intensitas sinar UV langsung di lapangan terbuka.",
+                    "C. Suhu lingkungan nursery yang terlalu dingin di bawah 5°C."
+                ],
+                answer: 0,
+                explanation: "Etiolasi terjadi akibat tanaman kekurangan cahaya; Auksin bertumpuk tidak terurai menyebabkan pemanjangan sel abnormal mencari cahaya."
+            },
+            {
+                id: 68,
+                question: "[Kasus Mesin] Mesin pemotong rumput gendong (brush cutter) mengalami getaran hebat (vibrasi anomali) saat digas tinggi. Pemeriksaan awal yang wajib dilakukan adalah...",
+                options: [
+                    "A. Memeriksa keretakan, kehausan uneven, atau ketidakseimbangan (unbalance) pada pisau pemotong besi.",
+                    "B. Mengganti oli mesin dengan oli kapal transmisi berat.",
+                    "C. Mengencangkan tali gendong harness hingga sangat ketat."
+                ],
+                answer: 0,
+                explanation: "Getaran hebat pada rpm tinggi indikasi utama pisau pemotong bengkok, retak, atau aus tidak seimbang (unbalance centripetal force)."
+            },
+            {
+                id: 69,
+                question: "[Kasus Pakan/Ternak] Pada budidaya ternak sapi perah, pemberian pakan hijauan (roughage) berkadar serat kasar tinggi secara mendadak diganti total dengan konsentrat karbohidrat tinggi. Risiko gangguan pencernaan akut yang terjadi adalah...",
+                options: [
+                    "A. Asidosis Rumen (Rumen Acidosis) akibat produksi asam laktat berlebih oleh bakteri rumen.",
+                    "B. Penyakit Mulut dan Kuku (PMK) spontan.",
+                    "C. Kelumpuhan akibat kekurangan zat besi darah."
+                ],
+                answer: 0,
+                explanation: "Konsentrat karbohidrat cepat fermentasi memicu akumulasi asam laktat pesat di rumen, menurunkan pH rumen <5.0 (Asidosis Rumen)."
+            },
+            {
+                id: 70,
+                question: "[Kasus Greenhouse] Pada siang hari yang cerah di musim panas, kadar CO2 di dalam greenhouse tertutup rapat turun drastis hingga di bawah 150 ppm (di bawah kadar udara luar ~400 ppm). Dampaknya pada tanaman dan solusinya adalah...",
+                options: [
+                    "A. Fotosintesis terhenti total (titik kompensasi CO2); solusinya membuka ventilasi atau injeksi CO2 buatan.",
+                    "B. Respirasi tanaman berhenti; solusinya menyiram tanaman dengan air es.",
+                    "C. Tanaman mengalami transpirasi berlebih; solusinya menyalakan lampu pemanas."
+                ],
+                answer: 0,
+                explanation: "Saat fotosintesis pesat di siang hari dalam greenhouse tertutup, CO2 tersedot habis hingga bawah titik kompensasi, menhentikan fotosintesis."
             }
         ];
 
@@ -1328,18 +1726,27 @@
 
         function changeDay(day) {
             currentDay = parseInt(day);
-            activeQuestions = (currentDay === 1) ? questionsDay1 : questionsDay2;
+            if (currentDay === 1) {
+                activeQuestions = questionsDay1;
+            } else if (currentDay === 2) {
+                activeQuestions = questionsDay2;
+            } else if (currentDay === 3) {
+                activeQuestions = questionsDay3;
+            }
             
             // Sync UI Elements
             document.getElementById('daySelector').value = currentDay;
             
             const btnDay1 = document.getElementById('btnSelectDay1');
             const btnDay2 = document.getElementById('btnSelectDay2');
+            const btnDay3 = document.getElementById('btnSelectDay3');
             
+            btnDay1.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50";
+            btnDay2.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50";
+            btnDay3.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50";
+
             if (currentDay === 1) {
                 btnDay1.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition bg-white text-agri-700 shadow-sm";
-                btnDay2.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50";
-                
                 document.getElementById('headerSubTitle').innerText = "Hari Pertama: Budidaya Buah (果樹栽培)";
                 document.getElementById('startCardTitle').innerText = "Simulasi SSW Pertanian - Hari 1";
                 document.getElementById('startCardDesc').innerHTML = "Uji pengetahuan Anda tentang <b>Kegiatan Budidaya Buah (果樹栽培)</b> dengan 30 soal pilihan ganda.";
@@ -1347,10 +1754,8 @@
                 document.getElementById('quizDayBadge').innerText = "Hari 1";
                 document.getElementById('studyModeTitle').innerText = "Mode Belajar SSW Pertanian - Hari 1";
                 document.getElementById('studyModeDesc').innerText = "Pelajari seluruh 30 soal budidaya buah beserta kunci jawaban resmi dan pembahasan materi kebun pertanian Jepang.";
-            } else {
+            } else if (currentDay === 2) {
                 btnDay2.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition bg-white text-agri-700 shadow-sm";
-                btnDay1.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition text-slate-600 hover:bg-white/50";
-                
                 document.getElementById('headerSubTitle').innerText = "Hari Ke-2: Dasar Pertanian, K3, Padi & Hortikultura";
                 document.getElementById('startCardTitle').innerText = "Simulasi SSW Pertanian - Hari 2";
                 document.getElementById('startCardDesc').innerHTML = "Uji pengetahuan Anda tentang <b>Dasar Tanaman, K3, Budidaya Padi, Sayuran & Rumah Kaca</b> dengan 65 soal.";
@@ -1358,6 +1763,15 @@
                 document.getElementById('quizDayBadge').innerText = "Hari 2";
                 document.getElementById('studyModeTitle').innerText = "Mode Belajar SSW Pertanian - Hari 2";
                 document.getElementById('studyModeDesc').innerText = "Pelajari seluruh 65 soal dasar pertanian, keselamatan kerja, padi, dan rumah kaca beserta pembahasan.";
+            } else if (currentDay === 3) {
+                btnDay3.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition bg-white text-agri-700 shadow-sm";
+                document.getElementById('headerSubTitle').innerText = "Hari Ke-3: Soal Praktik & Kasus Lapangan HOTS (70 Soal)";
+                document.getElementById('startCardTitle').innerText = "Simulasi SSW Pertanian - Hari 3";
+                document.getElementById('startCardDesc').innerHTML = "Uji pengetahuan Anda tentang <b>Manajemen Risiko, Fisiologi Lanjut, PHT, & Studi Kasus HOTS</b> dengan 70 soal pilihan ganda.";
+                document.getElementById('startCardTotal').innerText = "70 Soal";
+                document.getElementById('quizDayBadge').innerText = "Hari 3";
+                document.getElementById('studyModeTitle').innerText = "Mode Belajar SSW Pertanian - Hari 3";
+                document.getElementById('studyModeDesc').innerText = "Pelajari seluruh 70 soal analisis situasi, manajemen risiko, dan fisiologi tanaman tingkat lanjut.";
             }
 
             // Reset State
